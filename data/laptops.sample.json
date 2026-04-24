@@ -1,0 +1,221 @@
+{
+  "_comment": "Reference shape for data/laptops.json. Replace with the real, fully-populated file during implementation. Prices are in USD cents.",
+  "products": [
+    {
+      "id": "apex-15",
+      "name": "Dell Apex 15",
+      "tagline": "Creator-grade performance in a 15-inch frame.",
+      "description": "The Apex 15 pairs Intel Core Ultra processors with a factory-calibrated OLED option and an all-aluminum chassis. Built for developers and creators who need a quiet, cool workstation that travels.\n\nWith up to 64 GB of LPDDR5x memory and 4 TB of PCIe Gen4 storage, the Apex 15 scales from light coding to 4K video work without breaking a sweat.",
+      "brand": "Dell",
+      "category": "laptop",
+      "images": [
+        { "src": "/images/apex-15/hero.jpg", "alt": "Dell Apex 15 open on a desk, front three-quarter view", "width": 1600, "height": 1200 },
+        { "src": "/images/apex-15/side.jpg", "alt": "Dell Apex 15 side profile showing port layout", "width": 1600, "height": 1200 },
+        { "src": "/images/apex-15/keyboard.jpg", "alt": "Close-up of the Apex 15 backlit keyboard and trackpad", "width": 1600, "height": 1200 }
+      ],
+      "basePrice": 189900,
+      "currency": "USD",
+      "rating": { "average": 4.6, "count": 1284 },
+      "badges": ["New", "Energy Star"],
+      "configurable": [
+        {
+          "id": "cpu",
+          "label": "Processor",
+          "helpText": "Choose the engine that fits your workload.",
+          "required": true,
+          "options": [
+            { "sku": "cpu-u5-125h", "label": "Intel Core Ultra 5 125H", "sublabel": "14 cores, up to 4.5 GHz", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "cpu-u7-155h", "label": "Intel Core Ultra 7 155H", "sublabel": "16 cores, up to 4.8 GHz", "priceDelta": 20000, "default": false, "inStock": true },
+            { "sku": "cpu-u9-185h", "label": "Intel Core Ultra 9 185H", "sublabel": "16 cores, up to 5.1 GHz", "priceDelta": 45000, "default": false, "inStock": false }
+          ]
+        },
+        {
+          "id": "ram",
+          "label": "Memory",
+          "required": true,
+          "options": [
+            { "sku": "ram-16", "label": "16 GB LPDDR5x, 6400 MT/s", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "ram-32", "label": "32 GB LPDDR5x, 6400 MT/s", "priceDelta": 15000, "default": false, "inStock": true },
+            { "sku": "ram-64", "label": "64 GB LPDDR5x, 6400 MT/s", "priceDelta": 40000, "default": false, "inStock": true, "incompatibleWith": ["cpu-u5-125h"] }
+          ]
+        },
+        {
+          "id": "storage",
+          "label": "Storage",
+          "required": true,
+          "options": [
+            { "sku": "ssd-512", "label": "512 GB PCIe Gen4 NVMe SSD", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "ssd-1tb", "label": "1 TB PCIe Gen4 NVMe SSD", "priceDelta": 10000, "default": false, "inStock": true },
+            { "sku": "ssd-2tb", "label": "2 TB PCIe Gen4 NVMe SSD", "priceDelta": 25000, "default": false, "inStock": true },
+            { "sku": "ssd-4tb", "label": "4 TB PCIe Gen4 NVMe SSD", "priceDelta": 60000, "default": false, "inStock": true }
+          ]
+        },
+        {
+          "id": "display",
+          "label": "Display",
+          "required": true,
+          "options": [
+            { "sku": "disp-fhd", "label": "15.6\" FHD+ 1920×1200, 120 Hz IPS", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "disp-oled", "label": "15.6\" 3.5K OLED 3456×2160, 120 Hz, touch", "priceDelta": 35000, "default": false, "inStock": true }
+          ]
+        },
+        {
+          "id": "color",
+          "label": "Color",
+          "required": true,
+          "options": [
+            { "sku": "color-platinum", "label": "Platinum Silver", "swatch": "#C0C2C4", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "color-graphite", "label": "Graphite", "swatch": "#2B2F33", "priceDelta": 0, "default": false, "inStock": true },
+            { "sku": "color-midnight", "label": "Midnight Blue", "swatch": "#1A2A44", "priceDelta": 0, "default": false, "inStock": true }
+          ]
+        },
+        {
+          "id": "warranty",
+          "label": "Warranty",
+          "required": true,
+          "options": [
+            { "sku": "war-1y", "label": "1-year limited hardware warranty", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "war-3y", "label": "3-year Premium Support Plus", "priceDelta": 25000, "default": false, "inStock": true },
+            { "sku": "war-4y", "label": "4-year Premium Support Plus with Accidental Damage", "priceDelta": 42000, "default": false, "inStock": true }
+          ]
+        }
+      ],
+      "specs": [
+        {
+          "id": "processor",
+          "label": "Processor",
+          "rows": [
+            { "label": "Family", "value": "Intel Core Ultra", "highlight": true },
+            { "label": "Integrated graphics", "value": "Intel Arc Graphics" },
+            { "label": "Cache", "value": "Up to 24 MB" }
+          ]
+        },
+        {
+          "id": "display",
+          "label": "Display",
+          "rows": [
+            { "label": "Size", "value": "15.6 inches" },
+            { "label": "Refresh rate", "value": "120 Hz" },
+            { "label": "Color gamut", "value": "100% DCI-P3 (OLED)" }
+          ]
+        },
+        {
+          "id": "ports",
+          "label": "Ports & Slots",
+          "rows": [
+            { "label": "Thunderbolt 4", "value": "2" },
+            { "label": "USB-A 3.2", "value": "1" },
+            { "label": "HDMI", "value": "2.1" },
+            { "label": "SD card", "value": "UHS-II" },
+            { "label": "Audio", "value": "3.5 mm combo" }
+          ]
+        },
+        {
+          "id": "battery",
+          "label": "Battery & Power",
+          "rows": [
+            { "label": "Battery", "value": "86 Wh, 6-cell" },
+            { "label": "Charger", "value": "130 W USB-C" }
+          ]
+        },
+        {
+          "id": "dimensions",
+          "label": "Dimensions & Weight",
+          "rows": [
+            { "label": "Height", "value": "18.7 mm" },
+            { "label": "Width", "value": "344 mm" },
+            { "label": "Depth", "value": "230 mm" },
+            { "label": "Weight (starting)", "value": "1.84 kg" }
+          ]
+        },
+        {
+          "id": "os",
+          "label": "Operating System",
+          "rows": [
+            { "label": "Shipping OS", "value": "Windows 11 Pro" }
+          ]
+        },
+        {
+          "id": "sustainability",
+          "label": "Sustainability",
+          "rows": [
+            { "label": "Certification", "value": "EPEAT Gold, Energy Star 8.0" },
+            { "label": "Recycled content", "value": "Up to 50% recycled aluminum in chassis" }
+          ]
+        }
+      ],
+      "inTheBox": [
+        "Dell Apex 15 laptop",
+        "130 W USB-C power adapter",
+        "Quick-start guide",
+        "Safety and regulatory information"
+      ],
+      "warranty": {
+        "defaultSku": "war-1y",
+        "options": [
+          { "sku": "war-1y", "label": "1-year limited hardware warranty" },
+          { "sku": "war-3y", "label": "3-year Premium Support Plus" },
+          { "sku": "war-4y", "label": "4-year Premium Support Plus with Accidental Damage" }
+        ]
+      },
+      "releaseDate": "2026-03-01"
+    }
+  ],
+  "reviews": {
+    "apex-15": [
+      {
+        "id": "r-001",
+        "author": "Priya S.",
+        "rating": 5,
+        "title": "Fast, cool, and quiet",
+        "body": "I've been running Docker, a local LLM, and VS Code all day without the fan ever ramping up. The OLED is gorgeous for design work too.",
+        "verifiedPurchase": true,
+        "createdAt": "2026-03-14",
+        "helpfulCount": 42
+      },
+      {
+        "id": "r-002",
+        "author": "Marcus W.",
+        "rating": 4,
+        "title": "Great machine, loud charger coil whine",
+        "body": "Love the build quality and the keyboard is excellent. One star off because the included charger has a faint coil whine at low loads. Dell support sent a replacement quickly.",
+        "verifiedPurchase": true,
+        "createdAt": "2026-03-20",
+        "helpfulCount": 17
+      },
+      {
+        "id": "r-003",
+        "author": "Elena R.",
+        "rating": 5,
+        "title": "Replaced my MacBook",
+        "body": "Coming from a 14\" MBP, the Apex 15 feels just as premium with more ports and a better display for the price.",
+        "verifiedPurchase": false,
+        "createdAt": "2026-04-02",
+        "helpfulCount": 9
+      }
+    ]
+  },
+  "accessories": [
+    {
+      "id": "acc-dock-wd22",
+      "name": "Dell Thunderbolt Dock WD22TB4",
+      "price": 32900,
+      "image": { "src": "/images/accessories/wd22tb4.jpg", "alt": "Dell Thunderbolt Dock WD22TB4", "width": 800, "height": 600 },
+      "compatibleWith": ["apex-15"]
+    },
+    {
+      "id": "acc-mouse-ms900",
+      "name": "Dell Premier Rechargeable Mouse MS900",
+      "price": 9999,
+      "image": { "src": "/images/accessories/ms900.jpg", "alt": "Dell Premier Rechargeable Mouse MS900", "width": 800, "height": 600 },
+      "compatibleWith": ["apex-15"]
+    },
+    {
+      "id": "acc-sleeve-15",
+      "name": "Dell EcoLoop Premier Sleeve 15",
+      "price": 4999,
+      "image": { "src": "/images/accessories/sleeve15.jpg", "alt": "Dell EcoLoop Premier Sleeve 15", "width": 800, "height": 600 },
+      "compatibleWith": ["apex-15"]
+    }
+  ]
+}
