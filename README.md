@@ -59,6 +59,12 @@ data/
 └── laptops.sample.json          ← canonical sample dataset
 ```
 
+## Getting started in Windsurf
+
+See **[SETUP.md](./SETUP.md)** for a step-by-step runbook with three
+suggested paths (implement the worked feature, drive the full SDD
+flow, or specify something new) and copy-paste prompts for each step.
+
 ## Workflow (per feature)
 
 In Windsurf, run these slash commands in order:
