@@ -41,19 +41,19 @@ local JSON dataset — no external network calls.
     └── data-constraints.md
 
 specs/
-└── 001-laptop-product-page/
-    ├── spec.md
-    ├── plan.md
-    ├── research.md
-    ├── data-model.md
-    ├── quickstart.md
-    ├── tasks.md
-    ├── contracts/
-    │   ├── dataset.schema.ts
-    │   ├── cart.schema.ts
-    │   └── url-config.md
-    └── checklists/
-        └── requirements.md
+├── 001-laptop-product-page/     ← worked example, fully planned
+│   ├── spec.md
+│   ├── plan.md
+│   ├── research.md
+│   ├── data-model.md
+│   ├── quickstart.md
+│   ├── tasks.md
+│   ├── contracts/{dataset,cart}.schema.ts, url-config.md
+│   └── checklists/requirements.md
+├── 002-laptop-catalog/          ← spec only; drive /speckit.clarify next
+│   └── spec.md
+└── 003-recently-viewed/         ← spec only; drive /speckit.clarify next
+    └── spec.md
 
 data/
 └── laptops.sample.json          ← canonical sample dataset
@@ -90,8 +90,20 @@ In Windsurf, run these slash commands in order:
 See [`.specify/memory/constitution.md`](./.specify/memory/constitution.md)
 for the ratified text and amendment process.
 
-## Active feature
+## Features
 
-[`specs/001-laptop-product-page/`](./specs/001-laptop-product-page/) —
-spec is drafted, plan + tasks are ready. Run `/speckit.analyze` followed
-by `/speckit.implement` to build it.
+- [`001-laptop-product-page`](./specs/001-laptop-product-page/) — fully
+  planned: spec, plan, research, data-model, contracts, tasks, and
+  requirements checklist. Ready for `/speckit.analyze` →
+  `/speckit.implement`.
+- [`002-laptop-catalog`](./specs/002-laptop-catalog/) — `/laptops`
+  listing with filters, sort, and search. Spec only, with open
+  `[NEEDS CLARIFICATION]` markers — exercise `/speckit.clarify` →
+  `/speckit.plan` → `/speckit.tasks`.
+- [`003-recently-viewed`](./specs/003-recently-viewed/) — persistent
+  recently-viewed strip. Spec only, with open clarifications — small
+  scope makes it a good first run through the full workflow.
+
+`.specify/feature.json` points at the currently-active feature; update
+it when you start working on a different one (or use the
+`create-new-feature.sh` script to bootstrap a new one).
