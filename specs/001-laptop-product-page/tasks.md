@@ -141,8 +141,19 @@ Repo-relative. Single Next.js project. Source tree per `plan.md`.
       Serious / Critical findings.
 - [ ] **T094** Run Lighthouse via `@lhci/cli`; capture scores in PR
       description. Fix until ≥ 90/95/95/95.
-- [ ] **T095** Verify every FR-### in `spec.md` has at least one test
-      reference (grep). Update `checklists/requirements.md`.
+- [ ] **T095** Implement `tests/unit/coverage.test.ts`: parse
+      `spec.md` for every `FR-###` ID, grep the `tests/` tree, assert
+      each ID is referenced in at least one test file. Failures must
+      list the missing IDs. Runs as part of `pnpm test:unit`.
+- [ ] **T096** [US1] Extend `tests/e2e/configure-and-add-to-cart.spec.ts`
+      with an SC-001 assertion: count user-observable interactions
+      (clicks, `Enter` keypresses) between `page.goto` and the visible
+      "Added to cart" toast; fail if > 4.
+- [ ] **T097** [US1] Implement `tests/unit/configurator-perf.test.ts`:
+      mount `<Configurator>` via RTL, fire `userEvent.click` on a
+      non-default option, measure elapsed time until the new price
+      is queryable via `findByText`; run 50 iterations and assert
+      p95 ≤ 100 ms (SC-002).
 
 ---
 
@@ -173,3 +184,9 @@ Repo-relative. Single Next.js project. Source tree per `plan.md`.
 | NFR-005 | T011, T012 |
 | NFR-006 | T028 (sticky bar), T093 |
 | NFR-007 | T090 |
+| SC-001 | T031, T096 |
+| SC-002 | T097 |
+| SC-003 | T094 |
+| SC-004 | T093 |
+| SC-005 | T092 |
+| SC-006 | T095 |
