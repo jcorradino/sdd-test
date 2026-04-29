@@ -1,4 +1,4 @@
-# Apex Laptops Storefront — Windsurf SDD Sandbox
+# XPS Laptops Storefront — Windsurf SDD Sandbox
 
 A Spec-Driven Development project laid out for [Windsurf](https://windsurf.com)
 using the [spec-kit](https://github.com/github/spec-kit) conventions.

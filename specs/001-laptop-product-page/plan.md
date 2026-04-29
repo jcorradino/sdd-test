@@ -20,7 +20,7 @@ an axe-core accessibility scan.
 - **Primary Dependencies**: Next.js 15, React 19, Tailwind CSS v4,
   shadcn/ui (Radix), Zustand 4, Zod 3, lucide-react.
 - **Storage**: local file at `data/laptops.json` for catalog data;
-  `localStorage` (key `apex.cart.v1`) for the user's cart.
+  `localStorage` (key `xps.cart.v1`) for the user's cart.
 - **Testing**: Vitest + React Testing Library + jsdom (units);
   Playwright + `@axe-core/playwright` (e2e + a11y).
 - **Target Platform**: last 2 versions of Chrome, Firefox, Safari, Edge.

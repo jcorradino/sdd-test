@@ -1,10 +1,10 @@
-// Persisted-cart contract. Stored in localStorage under "apex.cart.v1".
+// Persisted-cart contract. Stored in localStorage under "xps.cart.v1".
 // On schema-version mismatch the store resets silently rather than throwing.
 
 import { z } from "zod";
 import { ConfigGroupId } from "./dataset.schema";
 
-export const CART_STORAGE_KEY = "apex.cart.v1";
+export const CART_STORAGE_KEY = "xps.cart.v1";
 export const CART_SCHEMA_VERSION = 1;
 export const MAX_QUANTITY_PER_LINE = 5;
 

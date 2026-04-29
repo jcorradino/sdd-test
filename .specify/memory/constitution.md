@@ -1,4 +1,4 @@
-# Apex Laptops Storefront Constitution
+# XPS Laptops Storefront Constitution
 
 ## Core Principles
 
@@ -146,4 +146,4 @@ Versioning uses SemVer applied to governance impact:
   expanded.
 - **PATCH** — clarifications, typos, non-semantic wording.
 
-**Version**: 1.0.0 | **Ratified**: 2026-04-24 | **Last Amended**: 2026-04-24
+**Version**: 1.0.1 | **Ratified**: 2026-04-24 | **Last Amended**: 2026-04-29

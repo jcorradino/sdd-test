@@ -136,7 +136,7 @@ Closed enum: `"New" | "Best Seller" | "Energy Star" | "EPEAT Gold"`.
 
 ## Cart (client-only)
 
-Persisted in `localStorage` under key `apex.cart.v1`.
+Persisted in `localStorage` under key `xps.cart.v1`.
 
 ```ts
 type Cart = {
@@ -161,8 +161,8 @@ type CartLine = {
 - `quantity ∈ [1, 5]` per line.
 - `lines[i].id === lines[i].configuredSku`.
 - `selections` covers every `ConfigGroup.id` for the parent product.
-- On schema-version mismatch (e.g. future `apex.cart.v2` reading
-  `apex.cart.v1`), the store resets silently.
+- On schema-version mismatch (e.g. future `xps.cart.v2` reading
+  `xps.cart.v1`), the store resets silently.
 
 ## Derived values
 

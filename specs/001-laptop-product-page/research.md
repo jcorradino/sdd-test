@@ -52,7 +52,7 @@ justifies the call.
 
 ## R-004 — Cart state: Zustand + `persist`
 
-- **Decision**: Zustand store keyed `apex.cart.v1` with the official
+- **Decision**: Zustand store keyed `xps.cart.v1` with the official
   `persist` middleware writing to `localStorage`.
 - **Alternatives considered**:
   - React Context + manual localStorage sync — error-prone around SSR
