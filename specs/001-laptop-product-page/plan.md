@@ -47,6 +47,34 @@ an axe-core accessibility scan.
 
 No principle violations — Complexity Tracking is empty.
 
+## Success Criteria Measurement
+
+Every Success Criterion in `spec.md` is paired here with the concrete
+measurement that verifies it. If a row's methodology cannot be
+implemented as listed, this table — and the corresponding tasks in
+`tasks.md` — must be amended before `/speckit.implement` runs.
+
+| SC | Threshold | Methodology | Verified in | Task |
+|---|---|---|---|---|
+| SC-001 | ≤ 4 user-observable interactions from page load to cart-added toast | Playwright e2e instruments `page.on('console')` + click counters; the test asserts the toast becomes visible within 4 user inputs (click or `Enter`) starting at `page.goto` | `tests/e2e/configure-and-add-to-cart.spec.ts` | T031, T096 |
+| SC-002 | Price redraw ≤ 100 ms (p95) after a selection input event | Vitest perf test renders `<Configurator>` via RTL, fires `userEvent.click` on a non-default option, measures `performance.now()` between the event and the next paint via `findByText(price)`; runs 50 iterations, asserts p95 ≤ 100 ms on the CI runner | `tests/unit/configurator-perf.test.ts` | T097 |
+| SC-003 | Lighthouse desktop ≥ 90/95/95/95 (Perf/A11y/BP/SEO) | `@lhci/cli autorun` against a production build of `/products/apex-15`; thresholds declared in `.lighthouserc.json`; CI fails on regression | `.github/workflows/ci.yml` (`lighthouse` job) | T094 |
+| SC-004 | Zero axe-core Serious/Critical findings on `/products/apex-15` | `@axe-core/playwright` scan on the production build; assertion fails if any violation has `impact === "serious"` or `"critical"` | `tests/e2e/accessibility.spec.ts` | T093 |
+| SC-005 | Product-route client JS ≤ 180 KB gzipped | `@next/bundle-analyzer` JSON output parsed by `scripts/check-bundle-size.mjs`; CI step compares the `app/products/[productId]` route-group entry to the threshold and fails on overage | `.github/workflows/ci.yml` (`bundle-size` job) | T092 |
+| SC-006 | 100 % of FRs map to ≥ 1 automated test | Vitest test (`coverage.test.ts`) extracts every `FR-###` ID from `spec.md`, then `grep`s the `tests/` tree; the assertion fails listing any FR without a matching reference. Runs as part of `pnpm test:unit`, not as a CI-only step | `tests/unit/coverage.test.ts` | T095 |
+
+Operational notes:
+
+- The Lighthouse and bundle-size jobs run against a production build
+  (`pnpm build && pnpm start`), not `pnpm dev` — dev-mode bundles and
+  unminified assets distort both metrics.
+- The configurator perf test runs in CI on the standard runner; if
+  CI noise produces flakes, raise the iteration count first and the
+  threshold last (the threshold is a Constitution-adjacent commitment).
+- SC-006's grep-based coverage check is intentionally cheap: it
+  enforces *traceability*, not depth. Test depth is enforced by the
+  per-task quality gates already listed above.
+
 ## Project Structure
 
 ### Documentation (this feature)

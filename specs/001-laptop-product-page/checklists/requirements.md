@@ -52,14 +52,29 @@ Each item references a Functional or Non-Functional Requirement from
 - [ ] **CHK025** NFR-006 — `prefers-reduced-motion` honored. *(T028, T093)*
 - [ ] **CHK026** NFR-007 — Valid JSON-LD Product. *(T090)*
 
+## Success Criteria measurement
+
+- [ ] **CHK027** SC-001 — ≤ 4 interactions from load to cart toast,
+      enforced by an e2e click counter. *(T031, T096)*
+- [ ] **CHK028** SC-002 — Price redraw p95 ≤ 100 ms across 50
+      iterations. *(T097)*
+- [ ] **CHK029** SC-003 — Lighthouse ≥ 90/95/95/95 enforced by
+      `.lighthouserc.json` assertions. *(T094)*
+- [ ] **CHK030** SC-004 — Zero axe Serious/Critical, enforced by
+      Playwright spec. *(T093)*
+- [ ] **CHK031** SC-005 — Bundle ≤ 180 KB gzip, enforced by CI parse
+      of `@next/bundle-analyzer` JSON. *(T092)*
+- [ ] **CHK032** SC-006 — Every FR-### has ≥ 1 test reference,
+      enforced by `coverage.test.ts`. *(T095)*
+
 ## Constitution compliance
 
-- [ ] **CHK030** Spec written before any implementation code landed.
-- [ ] **CHK031** No `fetch` to external services in any source file.
-- [ ] **CHK032** Each implementation task has a preceding failing-test
+- [ ] **CHK033** Spec written before any implementation code landed.
+- [ ] **CHK034** No `fetch` to external services in any source file.
+- [ ] **CHK035** Each implementation task has a preceding failing-test
       task in `tasks.md`.
-- [ ] **CHK033** All boundary types derived from Zod via `z.infer`.
-- [ ] **CHK034** Every UI primitive used exists in shadcn/ui;
+- [ ] **CHK036** All boundary types derived from Zod via `z.infer`.
+- [ ] **CHK037** Every UI primitive used exists in shadcn/ui;
       no hand-rolled equivalents.
 
 ## Quality gates (PR-level)
