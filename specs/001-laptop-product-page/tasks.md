@@ -125,6 +125,17 @@ Repo-relative. Single Next.js project. Source tree per `plan.md`.
       on selection change.
 - [ ] **T053** [P] [US3] Write Playwright spec
       `tests/e2e/share-config-url.spec.ts` covering US3 scenarios.
+- [ ] **T054** [P] [US3] Implement `tests/contracts/url-config.test.ts`
+      as a **contract pin** for
+      `specs/001-laptop-product-page/contracts/url-config.md`:
+      codify every row of the document's "Examples" table as an
+      input → output assertion against `lib/url-config.ts`, plus
+      assertions that pin the canonical group order
+      (`cpu, ram, storage, display, color, warranty`) and the
+      degradation rules (missing/empty/unknown SKU → group default,
+      malformed input never throws). Failures MUST reference the
+      contract section or table row that drifted. **Must land before
+      T051** so it fails red against the unimplemented module.
 
 ## Phase 6: Polish & Compliance
 
@@ -176,7 +187,7 @@ Repo-relative. Single Next.js project. Source tree per `plan.md`.
 | FR-013 | T025, T031 |
 | FR-014 | T028 |
 | FR-015 | T029 |
-| FR-016 | T050, T051, T052, T053 |
+| FR-016 | T050, T051, T052, T053, T054 |
 | FR-017 | T026 |
 | NFR-001..002 | T093 |
 | NFR-003 | T094 |

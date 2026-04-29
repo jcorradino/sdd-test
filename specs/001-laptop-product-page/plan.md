@@ -134,8 +134,12 @@ tests/
 │   ├── data.test.ts
 │   ├── price.test.ts
 │   ├── configurator.test.ts
+│   ├── configurator-perf.test.ts
 │   ├── cart.test.ts
+│   ├── coverage.test.ts
 │   └── seo.test.ts
+├── contracts/                     ← pins each file in specs/<feat>/contracts/
+│   └── url-config.test.ts
 └── e2e/
     ├── configure-and-add-to-cart.spec.ts
     ├── compatibility-auto-reset.spec.ts
@@ -149,6 +153,21 @@ tests/
 **Structure Decision**: Single Next.js project. A monorepo or split
 package boundary is not justified for one product page; revisit if a
 second surface (e.g. compare, search) is added.
+
+**Contract-test convention**: every file under
+`specs/<feature>/contracts/` MUST have a corresponding pin-test in
+`tests/contracts/`. Pin-tests codify the contract document's literal
+examples and named invariants — they are deliberately narrow and
+brittle so that any drift between the contract and the implementation
+fails loudly. Behavioral coverage of the underlying module continues
+to live under `tests/unit/`. The two are complementary, not
+substitutes.
+
+| Contract file | Pin-test file | Behavioral test file |
+|---|---|---|
+| `contracts/dataset.schema.ts` | (covered by `tests/unit/data.test.ts` — schema is itself a Zod object validated against real data) | `tests/unit/data.test.ts` |
+| `contracts/cart.schema.ts` | (covered by `tests/unit/cart.test.ts` — Zod schema directly imported and exercised) | `tests/unit/cart.test.ts` |
+| `contracts/url-config.md` | `tests/contracts/url-config.test.ts` (T054) | `tests/unit/url-config.test.ts` (T050) |
 
 ## Complexity Tracking
 
