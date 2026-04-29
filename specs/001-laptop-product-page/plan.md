@@ -154,6 +154,51 @@ tests/
 package boundary is not justified for one product page; revisit if a
 second surface (e.g. compare, search) is added.
 
+## Requirements → Implementation Surface
+
+Each `FR-###` and `NFR-###` from `spec.md` is mapped to the file or
+module that owns its behavior. This is **not** the FR → task map in
+`tasks.md` (that's execution-ordered); this is the architectural
+home of each requirement, intended to stay stable as tasks shift.
+
+When implementing a task, an agent should consult this table to find
+where the responsibility lives, then write the failing test against
+that surface.
+
+### Functional Requirements
+
+| FR | Owning surface |
+|---|---|
+| FR-001 | `app/products/[productId]/page.tsx` (`generateStaticParams`) |
+| FR-002 | `app/products/[productId]/_components/hero.tsx`, `gallery.tsx` |
+| FR-003 | `_components/configurator.tsx` + `lib/configurator.ts` reducer |
+| FR-004 | `lib/configurator.ts` selectors + `lib/price.ts` formatter |
+| FR-005 | `lib/configurator.ts` reducer (OOS rejection) + `_components/configurator.tsx` UI + `_components/sticky-buy-bar.tsx` (CTA disable) |
+| FR-006 | `lib/configurator.ts` reducer (auto-reset event) + `_components/configurator.tsx` (toast dispatch) |
+| FR-007 | `_components/tech-specs.tsx` (responsive: sticky-nav desktop, accordion mobile) |
+| FR-008 | `_components/tech-specs.tsx` (reactive banner) |
+| FR-009 | `_components/reviews.tsx` (summary, distribution, list, sort, filter) |
+| FR-010 | `_components/reviews.tsx` (empty-state branch) |
+| FR-011 | `_components/accessories.tsx` |
+| FR-012 | `lib/cart.ts` (`add` action, quantity cap) + `_components/configurator.tsx` (CTA wiring) |
+| FR-013 | `lib/cart.ts` (Zustand `persist` middleware) |
+| FR-014 | `_components/sticky-buy-bar.tsx` |
+| FR-015 | `components/cart/cart-badge.tsx`, `cart-drawer.tsx` |
+| FR-016 | `lib/url-config.ts` (encode/parse) + `app/products/[productId]/page.tsx` (server parse) + `_components/configurator.tsx` (debounced emit) |
+| FR-017 | `app/products/[productId]/page.tsx` (`notFound()`) |
+
+### Non-Functional Requirements
+
+| NFR | Owning surface |
+|---|---|
+| NFR-001 | Cross-cutting; enforced per-component, audited by `tests/e2e/accessibility.spec.ts` |
+| NFR-002 | `tests/e2e/accessibility.spec.ts` (axe-core gate) |
+| NFR-003 | `.github/workflows/ci.yml` (`lighthouse` job) + `.lighthouserc.json` |
+| NFR-004 | `.github/workflows/ci.yml` (`bundle-size` job) + `scripts/check-bundle-size.mjs` |
+| NFR-005 | Enforced by `lib/data.ts` being the only data entry; ESLint rule forbids `fetch` in source |
+| NFR-006 | `_components/sticky-buy-bar.tsx`, `gallery.tsx`, any future motion (CSS `@media (prefers-reduced-motion: reduce)`) |
+| NFR-007 | `lib/seo.ts` (JSON-LD `Product` builder) injected by `app/products/[productId]/page.tsx` |
+
 **Contract-test convention**: every file under
 `specs/<feature>/contracts/` MUST have a corresponding pin-test in
 `tests/contracts/`. Pin-tests codify the contract document's literal
