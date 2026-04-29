@@ -1,4 +1,4 @@
-# Quickstart — Apex 15 PDP
+# Quickstart — XPS 15 PDP
 
 ## Prerequisites
 
@@ -13,11 +13,11 @@ cp data/laptops.sample.json data/laptops.json   # if not already present
 pnpm dev
 ```
 
-Open <http://localhost:3000/products/apex-15>.
+Open <http://localhost:3000/products/xps-15>.
 
 ## Verify the MVP user story (US1)
 
-1. Confirm the hero shows the product name "Dell Apex 15", the
+1. Confirm the hero shows the product name "Dell XPS 15", the
    starting price, and the first hero image.
 2. In the configurator, switch the processor to **Intel Core Ultra 7
    155H**. The hero price should increase by exactly $200.00.
@@ -50,7 +50,7 @@ must remain ≤ 180 KB gzipped.
 ## Lighthouse
 
 ```bash
-pnpm dlx @lhci/cli autorun --collect.url=http://localhost:3000/products/apex-15
+pnpm dlx @lhci/cli autorun --collect.url=http://localhost:3000/products/xps-15
 ```
 
 Targets: Performance ≥ 90, Accessibility ≥ 95, Best Practices ≥ 95,

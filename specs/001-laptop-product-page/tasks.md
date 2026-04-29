@@ -2,7 +2,7 @@
 description: "Task list for 001-laptop-product-page"
 ---
 
-# Tasks: Dell Apex 15 Product Detail Page
+# Tasks: Dell XPS 15 Product Detail Page
 
 **Input**: Design documents from `/specs/001-laptop-product-page/`
 **Prerequisites**: spec.md, plan.md, data-model.md, contracts/, research.md
@@ -141,14 +141,14 @@ Repo-relative. Single Next.js project. Source tree per `plan.md`.
 
 - [ ] **T090** Implement `lib/seo.ts` JSON-LD `Product` builder;
       embed via `<script type="application/ld+json">` in the page.
-      Snapshot test the output for `apex-15`.
+      Snapshot test the output for `xps-15`.
 - [ ] **T091** Set `<title>` and `<meta name="description">` per
       NFR-007 / spec FR / SEO targets.
 - [ ] **T092** Add `@next/bundle-analyzer` behind `ANALYZE=true`.
       CI job warns when product-route JS exceeds 180 KB gzip
       (warning-only until baseline is captured).
 - [ ] **T093** Write `tests/e2e/accessibility.spec.ts` running
-      `@axe-core/playwright` on `/products/apex-15`; assert zero
+      `@axe-core/playwright` on `/products/xps-15`; assert zero
       Serious / Critical findings.
 - [ ] **T094** Run Lighthouse via `@lhci/cli`; capture scores in PR
       description. Fix until ≥ 90/95/95/95.

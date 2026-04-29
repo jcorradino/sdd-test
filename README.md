@@ -3,7 +3,7 @@
 A Spec-Driven Development project laid out for [Windsurf](https://windsurf.com)
 using the [spec-kit](https://github.com/github/spec-kit) conventions.
 The product under spec is a **Dell-style configurable laptop product
-detail page** (the fictional "Dell Apex 15"), built entirely from a
+detail page** (the fictional "Dell XPS 15"), built entirely from a
 local JSON dataset — no external network calls.
 
 ## Repository layout

@@ -1,4 +1,4 @@
-# Research — Dell Apex 15 PDP
+# Research — Dell XPS 15 PDP
 
 Decisions taken while drafting `plan.md`. Each entry names the choice,
 the alternatives considered, and the constitutional principle that

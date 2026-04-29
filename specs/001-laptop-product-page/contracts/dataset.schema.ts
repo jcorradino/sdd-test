@@ -1,4 +1,4 @@
-// Canonical Zod contracts for the Apex 15 PDP dataset.
+// Canonical Zod contracts for the XPS 15 PDP dataset.
 //
 // This file is the SOURCE OF TRUTH for all dataset shapes. The
 // implementation in `lib/schema.ts` MUST match this file exactly (it

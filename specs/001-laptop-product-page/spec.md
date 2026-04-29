@@ -1,15 +1,15 @@
-# Feature Specification: Dell Apex 15 Product Detail Page
+# Feature Specification: Dell XPS 15 Product Detail Page
 
 **Feature Branch**: `001-laptop-product-page`
 **Created**: 2026-04-24
 **Status**: Draft
-**Input**: User description: "Dell-style product detail page for a configurable 15-inch laptop (the fictional Apex 15), with live price and availability, tech specs, reviews, and add-to-cart. All data from a local JSON file."
+**Input**: User description: "Dell-style product detail page for a configurable 15-inch laptop (the fictional XPS 15), with live price and availability, tech specs, reviews, and add-to-cart. All data from a local JSON file."
 
 ## User Scenarios & Testing *(mandatory)*
 
-### User Story 1 - Configure and buy an Apex 15 (Priority: P1)
+### User Story 1 - Configure and buy an XPS 15 (Priority: P1)
 
-A shopper lands on the Apex 15 product page, picks their preferred
+A shopper lands on the XPS 15 product page, picks their preferred
 processor, memory, storage, display, color, and warranty, watches the
 price update as they choose, and adds the configured machine to their
 cart.
@@ -17,7 +17,7 @@ cart.
 **Why this priority:** This is the core revenue flow — without it, the
 page has no purpose. MVP is defined as completing this story end-to-end.
 
-**Independent Test:** A user can load `/products/apex-15`, change at
+**Independent Test:** A user can load `/products/xps-15`, change at
 least two options, see the displayed price change accordingly, click
 "Add to Cart", and see a cart indicator reflect the addition, with no
 other stories implemented.
@@ -41,7 +41,7 @@ other stories implemented.
 
 ### User Story 2 - Evaluate the laptop against its specs (Priority: P2)
 
-A shopper who is still deciding whether the Apex 15 fits their needs
+A shopper who is still deciding whether the XPS 15 fits their needs
 scrolls the full technical-specifications section, reads a summary of
 other customers' ratings, and sees which accessories are compatible.
 
@@ -226,7 +226,7 @@ session shows the same configuration and price.
 - **SC-003**: Desktop Lighthouse Performance ≥ 90, Accessibility ≥ 95,
   Best Practices ≥ 95, SEO ≥ 95.
 - **SC-004**: Zero axe-core Serious or Critical violations on a full
-  page scan of `/products/apex-15`.
+  page scan of `/products/xps-15`.
 - **SC-005**: Product-route JavaScript payload ≤ 180 KB gzip,
   measured by `@next/bundle-analyzer`.
 - **SC-006**: 100 % of Functional Requirements map to at least one
