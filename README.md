@@ -58,7 +58,17 @@ specs/
     └── spec.md
 
 data/
-└── laptops.sample.json          ← canonical sample dataset
+└── laptops.sample.json          ← canonical sample dataset (4 models)
+
+design/
+├── dds-tokens.json              ← DDS color tokens (source of truth, §VIII)
+└── README.md                    ← role→shadcn mapping + contrast notes
+
+experiments/
+└── accessibility-ab/            ← Path D: ruleset A/B protocol + harness
+    ├── README.md
+    ├── metrics.md
+    └── results-template.md
 ```
 
 ## Getting started in Windsurf
