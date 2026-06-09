@@ -44,6 +44,7 @@ an axe-core accessibility scan.
 | V. Type Safety at Trust Boundaries | ✅ | Zod schemas in `lib/schema.ts`; types via `z.infer`; URL/storage/JSON all parsed at the boundary. |
 | VI. Performance Budget Enforcement | ✅ | NFR-003/004; CI runs `@next/bundle-analyzer` and Lighthouse. |
 | VII. Component Primitive Reuse | ✅ | All listed primitives map to existing shadcn components; no hand-rolled equivalents planned. |
+| VIII. Brand & Design-Token Fidelity | ✅ | UI color comes from DDS role tokens in `design/dds-tokens.json` wired into the shadcn theme; product `swatch` values stay data-only. No raw hex in components. |
 
 No principle violations — Complexity Tracking is empty.
 

@@ -56,6 +56,7 @@ without errors:
 
 - `accessibility`
 - `data-constraints`
+- `design-system`
 - `sdd-workflow`
 - `specify-rules`
 - `stack-constraints`

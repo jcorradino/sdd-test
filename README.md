@@ -38,7 +38,9 @@ local JSON dataset — no external network calls.
     ├── specify-rules.md         ← managed pointer to active plan
     ├── sdd-workflow.md
     ├── stack-constraints.md
-    └── data-constraints.md
+    ├── data-constraints.md
+    ├── accessibility.md
+    └── design-system.md         ← DDS color tokens (Principle VIII)
 
 specs/
 ├── 001-laptop-product-page/     ← worked example, fully planned
@@ -92,6 +94,8 @@ In Windsurf, run these slash commands in order:
   Lighthouse ≥ 90/95/95/95.
 - **Component Reuse** — shadcn/ui (Radix) primitives; no hand-rolled
   equivalents.
+- **Design Tokens** — all UI color from Dell Design System role tokens
+  (`design/dds-tokens.json`); no raw hex in components.
 
 See [`.specify/memory/constitution.md`](./.specify/memory/constitution.md)
 for the ratified text and amendment process.
