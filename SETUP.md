@@ -148,7 +148,7 @@ workflow.
 ```bash
 pnpm install      # if not already done by Phase 1
 pnpm dev
-# open http://localhost:3000/products/apex-15
+# open http://localhost:3000/products/vela-15
 ```
 
 Run every quality gate:

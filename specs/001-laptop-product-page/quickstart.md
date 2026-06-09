@@ -13,7 +13,7 @@ cp data/laptops.sample.json data/laptops.json   # if not already present
 pnpm dev
 ```
 
-Open <http://localhost:3000/products/apex-15>.
+Open <http://localhost:3000/products/vela-15>.
 
 ## Verify the MVP user story (US1)
 
@@ -50,7 +50,7 @@ must remain ≤ 180 KB gzipped.
 ## Lighthouse
 
 ```bash
-pnpm dlx @lhci/cli autorun --collect.url=http://localhost:3000/products/apex-15
+pnpm dlx @lhci/cli autorun --collect.url=http://localhost:3000/products/vela-15
 ```
 
 Targets: Performance ≥ 90, Accessibility ≥ 95, Best Practices ≥ 95,

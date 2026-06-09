@@ -1,17 +1,17 @@
 {
-  "_comment": "Reference dataset for data/laptops.json. Prices are in USD cents. Contains 4 laptop models so the catalog (002) and recently-viewed (003) features have real variety in price tier, screen size, color, and badge. All option SKUs are globally unique; non-apex-15 SKUs are product-prefixed. Validated against contracts/dataset.schema.ts.",
+  "_comment": "Reference dataset for data/laptops.json. Prices are in USD cents. Contains 4 laptop models so the catalog (002) and recently-viewed (003) features have real variety in price tier, screen size, color, and badge. All option SKUs are globally unique; non-vela-15 SKUs are product-prefixed. Validated against contracts/dataset.schema.ts.",
   "products": [
     {
-      "id": "apex-15",
+      "id": "vela-15",
       "name": "Cobalt Vela 15",
       "tagline": "Creator-grade performance in a 15-inch frame.",
       "description": "The Vela 15 pairs Intel Core Ultra processors with a factory-calibrated OLED option and an all-aluminum chassis. Built for developers and creators who need a quiet, cool workstation that travels.\n\nWith up to 64 GB of LPDDR5x memory and 4 TB of PCIe Gen4 storage, the Vela 15 scales from light coding to 4K video work without breaking a sweat.",
       "brand": "Cobalt",
       "category": "laptop",
       "images": [
-        { "src": "/images/apex-15/hero.jpg", "alt": "Cobalt Vela 15 open on a desk, front three-quarter view", "width": 1600, "height": 1200 },
-        { "src": "/images/apex-15/side.jpg", "alt": "Cobalt Vela 15 side profile showing port layout", "width": 1600, "height": 1200 },
-        { "src": "/images/apex-15/keyboard.jpg", "alt": "Close-up of the Vela 15 backlit keyboard and trackpad", "width": 1600, "height": 1200 }
+        { "src": "/images/vela-15/hero.jpg", "alt": "Cobalt Vela 15 open on a desk, front three-quarter view", "width": 1600, "height": 1200 },
+        { "src": "/images/vela-15/side.jpg", "alt": "Cobalt Vela 15 side profile showing port layout", "width": 1600, "height": 1200 },
+        { "src": "/images/vela-15/keyboard.jpg", "alt": "Close-up of the Vela 15 backlit keyboard and trackpad", "width": 1600, "height": 1200 }
       ],
       "basePrice": 189900,
       "currency": "USD",
@@ -161,16 +161,16 @@
       "releaseDate": "2026-03-01"
     },
     {
-      "id": "apex-13",
+      "id": "vela-13",
       "name": "Cobalt Vela 13",
       "tagline": "Ultraportable power for life on the move.",
       "description": "At just over a kilogram, the Vela 13 disappears into a bag yet still runs Intel Core Ultra silicon and a bright FHD+ panel. It is the pick for commuters, students, and anyone who values reach over raw horsepower.\n\nA 65 W USB-C charger and all-day battery keep it light without compromising a full work day away from the desk.",
       "brand": "Cobalt",
       "category": "laptop",
       "images": [
-        { "src": "/images/apex-13/hero.jpg", "alt": "Cobalt Vela 13 open on a cafe table, front three-quarter view", "width": 1600, "height": 1200 },
-        { "src": "/images/apex-13/side.jpg", "alt": "Cobalt Vela 13 thin side profile", "width": 1600, "height": 1200 },
-        { "src": "/images/apex-13/lid.jpg", "alt": "Cobalt Vela 13 closed, showing the platinum lid finish", "width": 1600, "height": 1200 }
+        { "src": "/images/vela-13/hero.jpg", "alt": "Cobalt Vela 13 open on a cafe table, front three-quarter view", "width": 1600, "height": 1200 },
+        { "src": "/images/vela-13/side.jpg", "alt": "Cobalt Vela 13 thin side profile", "width": 1600, "height": 1200 },
+        { "src": "/images/vela-13/lid.jpg", "alt": "Cobalt Vela 13 closed, showing the platinum lid finish", "width": 1600, "height": 1200 }
       ],
       "basePrice": 119900,
       "currency": "USD",
@@ -183,8 +183,8 @@
           "helpText": "Efficient cores tuned for portability.",
           "required": true,
           "options": [
-            { "sku": "a13-cpu-u5", "label": "Intel Core Ultra 5 125U", "sublabel": "12 cores, up to 4.3 GHz", "priceDelta": 0, "default": true, "inStock": true },
-            { "sku": "a13-cpu-u7", "label": "Intel Core Ultra 7 155U", "sublabel": "12 cores, up to 4.8 GHz", "priceDelta": 15000, "default": false, "inStock": true }
+            { "sku": "v13-cpu-u5", "label": "Intel Core Ultra 5 125U", "sublabel": "12 cores, up to 4.3 GHz", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v13-cpu-u7", "label": "Intel Core Ultra 7 155U", "sublabel": "12 cores, up to 4.8 GHz", "priceDelta": 15000, "default": false, "inStock": true }
           ]
         },
         {
@@ -192,8 +192,8 @@
           "label": "Memory",
           "required": true,
           "options": [
-            { "sku": "a13-ram-16", "label": "16 GB LPDDR5x, 6400 MT/s", "priceDelta": 0, "default": true, "inStock": true },
-            { "sku": "a13-ram-32", "label": "32 GB LPDDR5x, 6400 MT/s", "priceDelta": 12000, "default": false, "inStock": true }
+            { "sku": "v13-ram-16", "label": "16 GB LPDDR5x, 6400 MT/s", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v13-ram-32", "label": "32 GB LPDDR5x, 6400 MT/s", "priceDelta": 12000, "default": false, "inStock": true }
           ]
         },
         {
@@ -201,9 +201,9 @@
           "label": "Storage",
           "required": true,
           "options": [
-            { "sku": "a13-ssd-256", "label": "256 GB PCIe Gen4 NVMe SSD", "priceDelta": 0, "default": true, "inStock": true },
-            { "sku": "a13-ssd-512", "label": "512 GB PCIe Gen4 NVMe SSD", "priceDelta": 8000, "default": false, "inStock": true },
-            { "sku": "a13-ssd-1tb", "label": "1 TB PCIe Gen4 NVMe SSD", "priceDelta": 18000, "default": false, "inStock": true }
+            { "sku": "v13-ssd-256", "label": "256 GB PCIe Gen4 NVMe SSD", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v13-ssd-512", "label": "512 GB PCIe Gen4 NVMe SSD", "priceDelta": 8000, "default": false, "inStock": true },
+            { "sku": "v13-ssd-1tb", "label": "1 TB PCIe Gen4 NVMe SSD", "priceDelta": 18000, "default": false, "inStock": true }
           ]
         },
         {
@@ -211,7 +211,7 @@
           "label": "Display",
           "required": true,
           "options": [
-            { "sku": "a13-disp-fhd", "label": "13.4\" FHD+ 1920×1200, 60 Hz IPS", "priceDelta": 0, "default": true, "inStock": true }
+            { "sku": "v13-disp-fhd", "label": "13.4\" FHD+ 1920×1200, 60 Hz IPS", "priceDelta": 0, "default": true, "inStock": true }
           ]
         },
         {
@@ -219,8 +219,8 @@
           "label": "Color",
           "required": true,
           "options": [
-            { "sku": "a13-color-platinum", "label": "Platinum Silver", "swatch": "#C0C2C4", "priceDelta": 0, "default": true, "inStock": true },
-            { "sku": "a13-color-graphite", "label": "Graphite", "swatch": "#2B2F33", "priceDelta": 0, "default": false, "inStock": true }
+            { "sku": "v13-color-platinum", "label": "Platinum Silver", "swatch": "#C0C2C4", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v13-color-graphite", "label": "Graphite", "swatch": "#2B2F33", "priceDelta": 0, "default": false, "inStock": true }
           ]
         },
         {
@@ -228,8 +228,8 @@
           "label": "Warranty",
           "required": true,
           "options": [
-            { "sku": "a13-war-1y", "label": "1-year limited hardware warranty", "priceDelta": 0, "default": true, "inStock": true },
-            { "sku": "a13-war-3y", "label": "3-year Premium Support Plus", "priceDelta": 20000, "default": false, "inStock": true }
+            { "sku": "v13-war-1y", "label": "1-year limited hardware warranty", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v13-war-3y", "label": "3-year Premium Support Plus", "priceDelta": 20000, "default": false, "inStock": true }
           ]
         }
       ],
@@ -288,25 +288,25 @@
         "Safety and regulatory information"
       ],
       "warranty": {
-        "defaultSku": "a13-war-1y",
+        "defaultSku": "v13-war-1y",
         "options": [
-          { "sku": "a13-war-1y", "label": "1-year limited hardware warranty" },
-          { "sku": "a13-war-3y", "label": "3-year Premium Support Plus" }
+          { "sku": "v13-war-1y", "label": "1-year limited hardware warranty" },
+          { "sku": "v13-war-3y", "label": "3-year Premium Support Plus" }
         ]
       },
       "releaseDate": "2026-02-15"
     },
     {
-      "id": "apex-14",
+      "id": "vela-14",
       "name": "Cobalt Vela 14",
       "tagline": "The everyday business workhorse.",
       "description": "The Vela 14 balances a compact 14-inch footprint with the ports and security features IT teams expect. A 120 Hz panel keeps scrolling and video calls smooth through the workday.\n\nConfigurable memory and storage let it flex from a fleet machine to a power user's daily driver.",
       "brand": "Cobalt",
       "category": "laptop",
       "images": [
-        { "src": "/images/apex-14/hero.jpg", "alt": "Cobalt Vela 14 open at a desk, front three-quarter view", "width": 1600, "height": 1200 },
-        { "src": "/images/apex-14/side.jpg", "alt": "Cobalt Vela 14 side profile showing port layout", "width": 1600, "height": 1200 },
-        { "src": "/images/apex-14/keyboard.jpg", "alt": "Close-up of the Vela 14 keyboard and fingerprint reader", "width": 1600, "height": 1200 }
+        { "src": "/images/vela-14/hero.jpg", "alt": "Cobalt Vela 14 open at a desk, front three-quarter view", "width": 1600, "height": 1200 },
+        { "src": "/images/vela-14/side.jpg", "alt": "Cobalt Vela 14 side profile showing port layout", "width": 1600, "height": 1200 },
+        { "src": "/images/vela-14/keyboard.jpg", "alt": "Close-up of the Vela 14 keyboard and fingerprint reader", "width": 1600, "height": 1200 }
       ],
       "basePrice": 149900,
       "currency": "USD",
@@ -318,8 +318,8 @@
           "label": "Processor",
           "required": true,
           "options": [
-            { "sku": "a14-cpu-u5", "label": "Intel Core Ultra 5 125H", "sublabel": "14 cores, up to 4.5 GHz", "priceDelta": 0, "default": true, "inStock": true },
-            { "sku": "a14-cpu-u7", "label": "Intel Core Ultra 7 155H", "sublabel": "16 cores, up to 4.8 GHz", "priceDelta": 18000, "default": false, "inStock": true }
+            { "sku": "v14-cpu-u5", "label": "Intel Core Ultra 5 125H", "sublabel": "14 cores, up to 4.5 GHz", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v14-cpu-u7", "label": "Intel Core Ultra 7 155H", "sublabel": "16 cores, up to 4.8 GHz", "priceDelta": 18000, "default": false, "inStock": true }
           ]
         },
         {
@@ -327,8 +327,8 @@
           "label": "Memory",
           "required": true,
           "options": [
-            { "sku": "a14-ram-16", "label": "16 GB LPDDR5x, 6400 MT/s", "priceDelta": 0, "default": true, "inStock": true },
-            { "sku": "a14-ram-32", "label": "32 GB LPDDR5x, 6400 MT/s", "priceDelta": 14000, "default": false, "inStock": true }
+            { "sku": "v14-ram-16", "label": "16 GB LPDDR5x, 6400 MT/s", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v14-ram-32", "label": "32 GB LPDDR5x, 6400 MT/s", "priceDelta": 14000, "default": false, "inStock": true }
           ]
         },
         {
@@ -336,8 +336,8 @@
           "label": "Storage",
           "required": true,
           "options": [
-            { "sku": "a14-ssd-512", "label": "512 GB PCIe Gen4 NVMe SSD", "priceDelta": 0, "default": true, "inStock": true },
-            { "sku": "a14-ssd-1tb", "label": "1 TB PCIe Gen4 NVMe SSD", "priceDelta": 10000, "default": false, "inStock": true }
+            { "sku": "v14-ssd-512", "label": "512 GB PCIe Gen4 NVMe SSD", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v14-ssd-1tb", "label": "1 TB PCIe Gen4 NVMe SSD", "priceDelta": 10000, "default": false, "inStock": true }
           ]
         },
         {
@@ -345,7 +345,7 @@
           "label": "Display",
           "required": true,
           "options": [
-            { "sku": "a14-disp-fhd", "label": "14\" FHD+ 1920×1200, 120 Hz IPS", "priceDelta": 0, "default": true, "inStock": true }
+            { "sku": "v14-disp-fhd", "label": "14\" FHD+ 1920×1200, 120 Hz IPS", "priceDelta": 0, "default": true, "inStock": true }
           ]
         },
         {
@@ -353,9 +353,9 @@
           "label": "Color",
           "required": true,
           "options": [
-            { "sku": "a14-color-platinum", "label": "Platinum Silver", "swatch": "#C0C2C4", "priceDelta": 0, "default": true, "inStock": true },
-            { "sku": "a14-color-graphite", "label": "Graphite", "swatch": "#2B2F33", "priceDelta": 0, "default": false, "inStock": true },
-            { "sku": "a14-color-midnight", "label": "Midnight Blue", "swatch": "#1A2A44", "priceDelta": 0, "default": false, "inStock": false }
+            { "sku": "v14-color-platinum", "label": "Platinum Silver", "swatch": "#C0C2C4", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v14-color-graphite", "label": "Graphite", "swatch": "#2B2F33", "priceDelta": 0, "default": false, "inStock": true },
+            { "sku": "v14-color-midnight", "label": "Midnight Blue", "swatch": "#1A2A44", "priceDelta": 0, "default": false, "inStock": false }
           ]
         },
         {
@@ -363,9 +363,9 @@
           "label": "Warranty",
           "required": true,
           "options": [
-            { "sku": "a14-war-1y", "label": "1-year limited hardware warranty", "priceDelta": 0, "default": true, "inStock": true },
-            { "sku": "a14-war-3y", "label": "3-year Premium Support Plus", "priceDelta": 22000, "default": false, "inStock": true },
-            { "sku": "a14-war-4y", "label": "4-year Premium Support Plus with Accidental Damage", "priceDelta": 38000, "default": false, "inStock": true }
+            { "sku": "v14-war-1y", "label": "1-year limited hardware warranty", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v14-war-3y", "label": "3-year Premium Support Plus", "priceDelta": 22000, "default": false, "inStock": true },
+            { "sku": "v14-war-4y", "label": "4-year Premium Support Plus with Accidental Damage", "priceDelta": 38000, "default": false, "inStock": true }
           ]
         }
       ],
@@ -418,26 +418,26 @@
         "Safety and regulatory information"
       ],
       "warranty": {
-        "defaultSku": "a14-war-1y",
+        "defaultSku": "v14-war-1y",
         "options": [
-          { "sku": "a14-war-1y", "label": "1-year limited hardware warranty" },
-          { "sku": "a14-war-3y", "label": "3-year Premium Support Plus" },
-          { "sku": "a14-war-4y", "label": "4-year Premium Support Plus with Accidental Damage" }
+          { "sku": "v14-war-1y", "label": "1-year limited hardware warranty" },
+          { "sku": "v14-war-3y", "label": "3-year Premium Support Plus" },
+          { "sku": "v14-war-4y", "label": "4-year Premium Support Plus with Accidental Damage" }
         ]
       },
       "releaseDate": "2026-01-20"
     },
     {
-      "id": "apex-16-pro",
+      "id": "vela-16-pro",
       "name": "Cobalt Vela 16 Pro",
       "tagline": "Desktop-class creation in a 16-inch frame.",
       "description": "The Vela 16 Pro pairs Intel Core Ultra H-series processors with discrete NVIDIA graphics and a 16-inch high-refresh display. It is built for 3D, video, and ML workloads that overwhelm an integrated GPU.\n\nA vapor-chamber cooling system holds clocks high under sustained load, while up to 64 GB of memory keeps large projects resident.",
       "brand": "Cobalt",
       "category": "laptop",
       "images": [
-        { "src": "/images/apex-16-pro/hero.jpg", "alt": "Cobalt Vela 16 Pro open on a studio desk, front three-quarter view", "width": 1600, "height": 1200 },
-        { "src": "/images/apex-16-pro/side.jpg", "alt": "Cobalt Vela 16 Pro side profile showing cooling vents", "width": 1600, "height": 1200 },
-        { "src": "/images/apex-16-pro/screen.jpg", "alt": "Cobalt Vela 16 Pro displaying a 3D rendering application", "width": 1600, "height": 1200 }
+        { "src": "/images/vela-16-pro/hero.jpg", "alt": "Cobalt Vela 16 Pro open on a studio desk, front three-quarter view", "width": 1600, "height": 1200 },
+        { "src": "/images/vela-16-pro/side.jpg", "alt": "Cobalt Vela 16 Pro side profile showing cooling vents", "width": 1600, "height": 1200 },
+        { "src": "/images/vela-16-pro/screen.jpg", "alt": "Cobalt Vela 16 Pro displaying a 3D rendering application", "width": 1600, "height": 1200 }
       ],
       "basePrice": 249900,
       "currency": "USD",
@@ -450,8 +450,8 @@
           "helpText": "H-series silicon for sustained heavy lifting.",
           "required": true,
           "options": [
-            { "sku": "a16-cpu-u7", "label": "Intel Core Ultra 7 165H", "sublabel": "16 cores, up to 5.0 GHz", "priceDelta": 0, "default": true, "inStock": true },
-            { "sku": "a16-cpu-u9", "label": "Intel Core Ultra 9 185H", "sublabel": "16 cores, up to 5.1 GHz", "priceDelta": 40000, "default": false, "inStock": true }
+            { "sku": "v16-cpu-u7", "label": "Intel Core Ultra 7 165H", "sublabel": "16 cores, up to 5.0 GHz", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v16-cpu-u9", "label": "Intel Core Ultra 9 185H", "sublabel": "16 cores, up to 5.1 GHz", "priceDelta": 40000, "default": false, "inStock": true }
           ]
         },
         {
@@ -459,9 +459,9 @@
           "label": "Memory",
           "required": true,
           "options": [
-            { "sku": "a16-ram-16", "label": "16 GB DDR5, 5600 MT/s", "priceDelta": 0, "default": true, "inStock": true },
-            { "sku": "a16-ram-32", "label": "32 GB DDR5, 5600 MT/s", "priceDelta": 15000, "default": false, "inStock": true },
-            { "sku": "a16-ram-64", "label": "64 GB DDR5, 5600 MT/s", "priceDelta": 38000, "default": false, "inStock": true }
+            { "sku": "v16-ram-16", "label": "16 GB DDR5, 5600 MT/s", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v16-ram-32", "label": "32 GB DDR5, 5600 MT/s", "priceDelta": 15000, "default": false, "inStock": true },
+            { "sku": "v16-ram-64", "label": "64 GB DDR5, 5600 MT/s", "priceDelta": 38000, "default": false, "inStock": true }
           ]
         },
         {
@@ -469,9 +469,9 @@
           "label": "Storage",
           "required": true,
           "options": [
-            { "sku": "a16-ssd-512", "label": "512 GB PCIe Gen4 NVMe SSD", "priceDelta": 0, "default": true, "inStock": true },
-            { "sku": "a16-ssd-1tb", "label": "1 TB PCIe Gen4 NVMe SSD", "priceDelta": 10000, "default": false, "inStock": true },
-            { "sku": "a16-ssd-2tb", "label": "2 TB PCIe Gen4 NVMe SSD", "priceDelta": 24000, "default": false, "inStock": true }
+            { "sku": "v16-ssd-512", "label": "512 GB PCIe Gen4 NVMe SSD", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v16-ssd-1tb", "label": "1 TB PCIe Gen4 NVMe SSD", "priceDelta": 10000, "default": false, "inStock": true },
+            { "sku": "v16-ssd-2tb", "label": "2 TB PCIe Gen4 NVMe SSD", "priceDelta": 24000, "default": false, "inStock": true }
           ]
         },
         {
@@ -479,8 +479,8 @@
           "label": "Display",
           "required": true,
           "options": [
-            { "sku": "a16-disp-qhd", "label": "16\" QHD+ 2560×1600, 165 Hz IPS", "priceDelta": 0, "default": true, "inStock": true },
-            { "sku": "a16-disp-oled", "label": "16\" 4K OLED 3840×2400, 120 Hz, touch", "priceDelta": 40000, "default": false, "inStock": true }
+            { "sku": "v16-disp-qhd", "label": "16\" QHD+ 2560×1600, 165 Hz IPS", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v16-disp-oled", "label": "16\" 4K OLED 3840×2400, 120 Hz, touch", "priceDelta": 40000, "default": false, "inStock": true }
           ]
         },
         {
@@ -488,8 +488,8 @@
           "label": "Color",
           "required": true,
           "options": [
-            { "sku": "a16-color-graphite", "label": "Graphite", "swatch": "#2B2F33", "priceDelta": 0, "default": true, "inStock": true },
-            { "sku": "a16-color-midnight", "label": "Midnight Blue", "swatch": "#1A2A44", "priceDelta": 0, "default": false, "inStock": true }
+            { "sku": "v16-color-graphite", "label": "Graphite", "swatch": "#2B2F33", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v16-color-midnight", "label": "Midnight Blue", "swatch": "#1A2A44", "priceDelta": 0, "default": false, "inStock": true }
           ]
         },
         {
@@ -497,9 +497,9 @@
           "label": "Warranty",
           "required": true,
           "options": [
-            { "sku": "a16-war-1y", "label": "1-year limited hardware warranty", "priceDelta": 0, "default": true, "inStock": true },
-            { "sku": "a16-war-3y", "label": "3-year Premium Support Plus", "priceDelta": 25000, "default": false, "inStock": true },
-            { "sku": "a16-war-4y", "label": "4-year Premium Support Plus with Accidental Damage", "priceDelta": 42000, "default": false, "inStock": true }
+            { "sku": "v16-war-1y", "label": "1-year limited hardware warranty", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v16-war-3y", "label": "3-year Premium Support Plus", "priceDelta": 25000, "default": false, "inStock": true },
+            { "sku": "v16-war-4y", "label": "4-year Premium Support Plus with Accidental Damage", "priceDelta": 42000, "default": false, "inStock": true }
           ]
         }
       ],
@@ -562,18 +562,18 @@
         "Safety and regulatory information"
       ],
       "warranty": {
-        "defaultSku": "a16-war-1y",
+        "defaultSku": "v16-war-1y",
         "options": [
-          { "sku": "a16-war-1y", "label": "1-year limited hardware warranty" },
-          { "sku": "a16-war-3y", "label": "3-year Premium Support Plus" },
-          { "sku": "a16-war-4y", "label": "4-year Premium Support Plus with Accidental Damage" }
+          { "sku": "v16-war-1y", "label": "1-year limited hardware warranty" },
+          { "sku": "v16-war-3y", "label": "3-year Premium Support Plus" },
+          { "sku": "v16-war-4y", "label": "4-year Premium Support Plus with Accidental Damage" }
         ]
       },
       "releaseDate": "2026-05-10"
     }
   ],
   "reviews": {
-    "apex-15": [
+    "vela-15": [
       {
         "id": "r-001",
         "author": "Priya S.",
@@ -605,7 +605,7 @@
         "helpfulCount": 9
       }
     ],
-    "apex-13": [
+    "vela-13": [
       {
         "id": "r-101",
         "author": "Tomas L.",
@@ -627,7 +627,7 @@
         "helpfulCount": 11
       }
     ],
-    "apex-14": [
+    "vela-14": [
       {
         "id": "r-201",
         "author": "Ravi N.",
@@ -649,7 +649,7 @@
         "helpfulCount": 14
       }
     ],
-    "apex-16-pro": [
+    "vela-16-pro": [
       {
         "id": "r-301",
         "author": "Owen P.",
@@ -678,28 +678,28 @@
       "name": "Cobalt Thunderbolt Dock WD22TB4",
       "price": 32900,
       "image": { "src": "/images/accessories/wd22tb4.jpg", "alt": "Cobalt Thunderbolt Dock WD22TB4", "width": 800, "height": 600 },
-      "compatibleWith": ["apex-13", "apex-14", "apex-15", "apex-16-pro"]
+      "compatibleWith": ["vela-13", "vela-14", "vela-15", "vela-16-pro"]
     },
     {
       "id": "acc-mouse-ms900",
       "name": "Cobalt Premier Rechargeable Mouse MS900",
       "price": 9999,
       "image": { "src": "/images/accessories/ms900.jpg", "alt": "Cobalt Premier Rechargeable Mouse MS900", "width": 800, "height": 600 },
-      "compatibleWith": ["apex-13", "apex-14", "apex-15", "apex-16-pro"]
+      "compatibleWith": ["vela-13", "vela-14", "vela-15", "vela-16-pro"]
     },
     {
       "id": "acc-sleeve-15",
       "name": "Cobalt EcoLoop Premier Sleeve 15",
       "price": 4999,
       "image": { "src": "/images/accessories/sleeve15.jpg", "alt": "Cobalt EcoLoop Premier Sleeve 15", "width": 800, "height": 600 },
-      "compatibleWith": ["apex-15", "apex-16-pro"]
+      "compatibleWith": ["vela-15", "vela-16-pro"]
     },
     {
       "id": "acc-sleeve-13",
       "name": "Cobalt EcoLoop Premier Sleeve 13",
       "price": 3999,
       "image": { "src": "/images/accessories/sleeve13.jpg", "alt": "Cobalt EcoLoop Premier Sleeve 13", "width": 800, "height": 600 },
-      "compatibleWith": ["apex-13", "apex-14"]
+      "compatibleWith": ["vela-13", "vela-14"]
     }
   ]
 }

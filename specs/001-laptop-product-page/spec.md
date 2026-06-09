@@ -17,7 +17,7 @@ cart.
 **Why this priority:** This is the core revenue flow — without it, the
 page has no purpose. MVP is defined as completing this story end-to-end.
 
-**Independent Test:** A user can load `/products/apex-15`, change at
+**Independent Test:** A user can load `/products/vela-15`, change at
 least two options, see the displayed price change accordingly, click
 "Add to Cart", and see a cart indicator reflect the addition, with no
 other stories implemented.
@@ -226,7 +226,7 @@ session shows the same configuration and price.
 - **SC-003**: Desktop Lighthouse Performance ≥ 90, Accessibility ≥ 95,
   Best Practices ≥ 95, SEO ≥ 95.
 - **SC-004**: Zero axe-core Serious or Critical violations on a full
-  page scan of `/products/apex-15`.
+  page scan of `/products/vela-15`.
 - **SC-005**: Product-route JavaScript payload ≤ 180 KB gzip,
   measured by `@next/bundle-analyzer`.
 - **SC-006**: 100 % of Functional Requirements map to at least one
