@@ -7,9 +7,11 @@
 
 ## Clarifications
 
-- [NEEDS CLARIFICATION: How long should an entry persist before it expires? Suggest 30 days; should the user be told this in any UI?]
-- [NEEDS CLARIFICATION: Should we record only PDP views, or also catalog-card hovers / catalog clicks? Recommendation: PDP views only, to avoid noise.]
-- [NEEDS CLARIFICATION: When the user adds a configured laptop to cart, do we still record it as recently viewed, or only as cart? Could double-render the same product if both are shown.]
+### Session 2026-06-09
+
+- Q: How long should a recently-viewed entry persist before it expires? → A: 30 days from the most recent view; expired entries are pruned silently on read. The TTL is not surfaced in any UI.
+- Q: What activity records a recently-viewed entry — PDP views only, or also catalog-card hovers/clicks? → A: PDP views only (a visit to `/products/<productId>`), to avoid noise.
+- Q: When a product is added to cart, is it still recorded as recently viewed? → A: Yes — recording is independent of the cart; a product may appear in both the cart and the strip, which de-duplicates only within itself.
 
 ## User Scenarios & Testing *(mandatory)*
 
@@ -105,8 +107,10 @@ displays it.
   than crashing the page.
 - The persisted store schema version is not the current version: the
   store resets silently (consistent with the cart store's behavior).
-- The same laptop is added to cart and recently viewed: rendering
-  rules per [NEEDS CLARIFICATION above].
+- The same laptop is added to cart and recently viewed: both surfaces
+  render it independently — being in the cart does not remove it from
+  the recently-viewed strip (the strip de-duplicates only within
+  itself).
 
 ## Requirements *(mandatory)*
 
@@ -114,7 +118,8 @@ displays it.
 
 - **FR-001**: The system MUST record a recently-viewed entry whenever
   the user visits a `/products/<productId>` route for a product that
-  exists in the dataset.
+  exists in the dataset. Catalog browsing, card hovers, and card clicks
+  do NOT record an entry — only a PDP visit does.
 - **FR-002**: The system MUST persist recently-viewed entries across
   page reloads within the same browser, scoped to the device only
   (no server, no auth, no cross-device sync).
@@ -137,6 +142,9 @@ displays it.
 - **FR-010**: Entries whose `productId` is no longer present in the
   dataset MUST be silently skipped at render time and pruned from the
   store on the next mutation.
+- **FR-011**: Each entry MUST expire 30 days after its most recent
+  view. Expired entries MUST be pruned when the store is read and MUST
+  NOT render. The expiry window is not surfaced in any UI.
 
 ### Non-Functional Requirements
 
