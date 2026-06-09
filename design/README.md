@@ -1,6 +1,6 @@
 # Design tokens — Dell Design System (DDS)
 
-Canonical color tokens for the Apex storefront. This directory is the
+Canonical color tokens for the Cobalt storefront. This directory is the
 single source of truth for Constitution **Principle VIII (Brand &
 Design-Token Fidelity)**. Component code consumes *roles*, never raw
 palette hex.

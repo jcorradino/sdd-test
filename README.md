@@ -1,17 +1,17 @@
-# Apex Laptops Storefront — Windsurf SDD Sandbox
+# Cobalt Laptops Storefront — Windsurf SDD Sandbox
 
 A Spec-Driven Development project laid out for [Windsurf](https://windsurf.com)
 using the [spec-kit](https://github.com/github/spec-kit) conventions.
-The product under spec is a **Dell-style configurable laptop product
-detail page** (the fictional "Dell Apex 15"), built entirely from a
-local JSON dataset — no external network calls.
+The product under spec is a **configurable laptop product detail page**
+(the fictional "Cobalt Vela 15"), styled with the Dell Design System and
+built entirely from a local JSON dataset — no external network calls.
 
 ## Repository layout
 
 ```
 .specify/
 ├── memory/
-│   └── constitution.md          ← ratified principles (v1.0.0)
+│   └── constitution.md          ← ratified principles (v1.1.0)
 ├── templates/
 │   ├── constitution-template.md
 │   ├── spec-template.md

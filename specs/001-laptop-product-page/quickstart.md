@@ -1,4 +1,4 @@
-# Quickstart — Apex 15 PDP
+# Quickstart — Vela 15 PDP
 
 ## Prerequisites
 
@@ -17,7 +17,7 @@ Open <http://localhost:3000/products/apex-15>.
 
 ## Verify the MVP user story (US1)
 
-1. Confirm the hero shows the product name "Dell Apex 15", the
+1. Confirm the hero shows the product name "Cobalt Vela 15", the
    starting price, and the first hero image.
 2. In the configurator, switch the processor to **Intel Core Ultra 7
    155H**. The hero price should increase by exactly $200.00.

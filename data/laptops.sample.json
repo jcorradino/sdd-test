@@ -3,15 +3,15 @@
   "products": [
     {
       "id": "apex-15",
-      "name": "Dell Apex 15",
+      "name": "Cobalt Vela 15",
       "tagline": "Creator-grade performance in a 15-inch frame.",
-      "description": "The Apex 15 pairs Intel Core Ultra processors with a factory-calibrated OLED option and an all-aluminum chassis. Built for developers and creators who need a quiet, cool workstation that travels.\n\nWith up to 64 GB of LPDDR5x memory and 4 TB of PCIe Gen4 storage, the Apex 15 scales from light coding to 4K video work without breaking a sweat.",
-      "brand": "Dell",
+      "description": "The Vela 15 pairs Intel Core Ultra processors with a factory-calibrated OLED option and an all-aluminum chassis. Built for developers and creators who need a quiet, cool workstation that travels.\n\nWith up to 64 GB of LPDDR5x memory and 4 TB of PCIe Gen4 storage, the Vela 15 scales from light coding to 4K video work without breaking a sweat.",
+      "brand": "Cobalt",
       "category": "laptop",
       "images": [
-        { "src": "/images/apex-15/hero.jpg", "alt": "Dell Apex 15 open on a desk, front three-quarter view", "width": 1600, "height": 1200 },
-        { "src": "/images/apex-15/side.jpg", "alt": "Dell Apex 15 side profile showing port layout", "width": 1600, "height": 1200 },
-        { "src": "/images/apex-15/keyboard.jpg", "alt": "Close-up of the Apex 15 backlit keyboard and trackpad", "width": 1600, "height": 1200 }
+        { "src": "/images/apex-15/hero.jpg", "alt": "Cobalt Vela 15 open on a desk, front three-quarter view", "width": 1600, "height": 1200 },
+        { "src": "/images/apex-15/side.jpg", "alt": "Cobalt Vela 15 side profile showing port layout", "width": 1600, "height": 1200 },
+        { "src": "/images/apex-15/keyboard.jpg", "alt": "Close-up of the Vela 15 backlit keyboard and trackpad", "width": 1600, "height": 1200 }
       ],
       "basePrice": 189900,
       "currency": "USD",
@@ -145,7 +145,7 @@
         }
       ],
       "inTheBox": [
-        "Dell Apex 15 laptop",
+        "Cobalt Vela 15 laptop",
         "130 W USB-C power adapter",
         "Quick-start guide",
         "Safety and regulatory information"
@@ -162,15 +162,15 @@
     },
     {
       "id": "apex-13",
-      "name": "Dell Apex 13",
+      "name": "Cobalt Vela 13",
       "tagline": "Ultraportable power for life on the move.",
-      "description": "At just over a kilogram, the Apex 13 disappears into a bag yet still runs Intel Core Ultra silicon and a bright FHD+ panel. It is the pick for commuters, students, and anyone who values reach over raw horsepower.\n\nA 65 W USB-C charger and all-day battery keep it light without compromising a full work day away from the desk.",
-      "brand": "Dell",
+      "description": "At just over a kilogram, the Vela 13 disappears into a bag yet still runs Intel Core Ultra silicon and a bright FHD+ panel. It is the pick for commuters, students, and anyone who values reach over raw horsepower.\n\nA 65 W USB-C charger and all-day battery keep it light without compromising a full work day away from the desk.",
+      "brand": "Cobalt",
       "category": "laptop",
       "images": [
-        { "src": "/images/apex-13/hero.jpg", "alt": "Dell Apex 13 open on a cafe table, front three-quarter view", "width": 1600, "height": 1200 },
-        { "src": "/images/apex-13/side.jpg", "alt": "Dell Apex 13 thin side profile", "width": 1600, "height": 1200 },
-        { "src": "/images/apex-13/lid.jpg", "alt": "Dell Apex 13 closed, showing the platinum lid finish", "width": 1600, "height": 1200 }
+        { "src": "/images/apex-13/hero.jpg", "alt": "Cobalt Vela 13 open on a cafe table, front three-quarter view", "width": 1600, "height": 1200 },
+        { "src": "/images/apex-13/side.jpg", "alt": "Cobalt Vela 13 thin side profile", "width": 1600, "height": 1200 },
+        { "src": "/images/apex-13/lid.jpg", "alt": "Cobalt Vela 13 closed, showing the platinum lid finish", "width": 1600, "height": 1200 }
       ],
       "basePrice": 119900,
       "currency": "USD",
@@ -282,7 +282,7 @@
         }
       ],
       "inTheBox": [
-        "Dell Apex 13 laptop",
+        "Cobalt Vela 13 laptop",
         "65 W USB-C power adapter",
         "Quick-start guide",
         "Safety and regulatory information"
@@ -298,15 +298,15 @@
     },
     {
       "id": "apex-14",
-      "name": "Dell Apex 14",
+      "name": "Cobalt Vela 14",
       "tagline": "The everyday business workhorse.",
-      "description": "The Apex 14 balances a compact 14-inch footprint with the ports and security features IT teams expect. A 120 Hz panel keeps scrolling and video calls smooth through the workday.\n\nConfigurable memory and storage let it flex from a fleet machine to a power user's daily driver.",
-      "brand": "Dell",
+      "description": "The Vela 14 balances a compact 14-inch footprint with the ports and security features IT teams expect. A 120 Hz panel keeps scrolling and video calls smooth through the workday.\n\nConfigurable memory and storage let it flex from a fleet machine to a power user's daily driver.",
+      "brand": "Cobalt",
       "category": "laptop",
       "images": [
-        { "src": "/images/apex-14/hero.jpg", "alt": "Dell Apex 14 open at a desk, front three-quarter view", "width": 1600, "height": 1200 },
-        { "src": "/images/apex-14/side.jpg", "alt": "Dell Apex 14 side profile showing port layout", "width": 1600, "height": 1200 },
-        { "src": "/images/apex-14/keyboard.jpg", "alt": "Close-up of the Apex 14 keyboard and fingerprint reader", "width": 1600, "height": 1200 }
+        { "src": "/images/apex-14/hero.jpg", "alt": "Cobalt Vela 14 open at a desk, front three-quarter view", "width": 1600, "height": 1200 },
+        { "src": "/images/apex-14/side.jpg", "alt": "Cobalt Vela 14 side profile showing port layout", "width": 1600, "height": 1200 },
+        { "src": "/images/apex-14/keyboard.jpg", "alt": "Close-up of the Vela 14 keyboard and fingerprint reader", "width": 1600, "height": 1200 }
       ],
       "basePrice": 149900,
       "currency": "USD",
@@ -412,7 +412,7 @@
         }
       ],
       "inTheBox": [
-        "Dell Apex 14 laptop",
+        "Cobalt Vela 14 laptop",
         "100 W USB-C power adapter",
         "Quick-start guide",
         "Safety and regulatory information"
@@ -429,15 +429,15 @@
     },
     {
       "id": "apex-16-pro",
-      "name": "Dell Apex 16 Pro",
+      "name": "Cobalt Vela 16 Pro",
       "tagline": "Desktop-class creation in a 16-inch frame.",
-      "description": "The Apex 16 Pro pairs Intel Core Ultra H-series processors with discrete NVIDIA graphics and a 16-inch high-refresh display. It is built for 3D, video, and ML workloads that overwhelm an integrated GPU.\n\nA vapor-chamber cooling system holds clocks high under sustained load, while up to 64 GB of memory keeps large projects resident.",
-      "brand": "Dell",
+      "description": "The Vela 16 Pro pairs Intel Core Ultra H-series processors with discrete NVIDIA graphics and a 16-inch high-refresh display. It is built for 3D, video, and ML workloads that overwhelm an integrated GPU.\n\nA vapor-chamber cooling system holds clocks high under sustained load, while up to 64 GB of memory keeps large projects resident.",
+      "brand": "Cobalt",
       "category": "laptop",
       "images": [
-        { "src": "/images/apex-16-pro/hero.jpg", "alt": "Dell Apex 16 Pro open on a studio desk, front three-quarter view", "width": 1600, "height": 1200 },
-        { "src": "/images/apex-16-pro/side.jpg", "alt": "Dell Apex 16 Pro side profile showing cooling vents", "width": 1600, "height": 1200 },
-        { "src": "/images/apex-16-pro/screen.jpg", "alt": "Dell Apex 16 Pro displaying a 3D rendering application", "width": 1600, "height": 1200 }
+        { "src": "/images/apex-16-pro/hero.jpg", "alt": "Cobalt Vela 16 Pro open on a studio desk, front three-quarter view", "width": 1600, "height": 1200 },
+        { "src": "/images/apex-16-pro/side.jpg", "alt": "Cobalt Vela 16 Pro side profile showing cooling vents", "width": 1600, "height": 1200 },
+        { "src": "/images/apex-16-pro/screen.jpg", "alt": "Cobalt Vela 16 Pro displaying a 3D rendering application", "width": 1600, "height": 1200 }
       ],
       "basePrice": 249900,
       "currency": "USD",
@@ -556,7 +556,7 @@
         }
       ],
       "inTheBox": [
-        "Dell Apex 16 Pro laptop",
+        "Cobalt Vela 16 Pro laptop",
         "240 W USB-C power adapter",
         "Quick-start guide",
         "Safety and regulatory information"
@@ -589,7 +589,7 @@
         "author": "Marcus W.",
         "rating": 4,
         "title": "Great machine, loud charger coil whine",
-        "body": "Love the build quality and the keyboard is excellent. One star off because the included charger has a faint coil whine at low loads. Dell support sent a replacement quickly.",
+        "body": "Love the build quality and the keyboard is excellent. One star off because the included charger has a faint coil whine at low loads. Cobalt support sent a replacement quickly.",
         "verifiedPurchase": true,
         "createdAt": "2026-03-20",
         "helpfulCount": 17
@@ -599,7 +599,7 @@
         "author": "Elena R.",
         "rating": 5,
         "title": "Replaced my MacBook",
-        "body": "Coming from a 14\" MBP, the Apex 15 feels just as premium with more ports and a better display for the price.",
+        "body": "Coming from a 14\" MBP, the Vela 15 feels just as premium with more ports and a better display for the price.",
         "verifiedPurchase": false,
         "createdAt": "2026-04-02",
         "helpfulCount": 9
@@ -675,30 +675,30 @@
   "accessories": [
     {
       "id": "acc-dock-wd22",
-      "name": "Dell Thunderbolt Dock WD22TB4",
+      "name": "Cobalt Thunderbolt Dock WD22TB4",
       "price": 32900,
-      "image": { "src": "/images/accessories/wd22tb4.jpg", "alt": "Dell Thunderbolt Dock WD22TB4", "width": 800, "height": 600 },
+      "image": { "src": "/images/accessories/wd22tb4.jpg", "alt": "Cobalt Thunderbolt Dock WD22TB4", "width": 800, "height": 600 },
       "compatibleWith": ["apex-13", "apex-14", "apex-15", "apex-16-pro"]
     },
     {
       "id": "acc-mouse-ms900",
-      "name": "Dell Premier Rechargeable Mouse MS900",
+      "name": "Cobalt Premier Rechargeable Mouse MS900",
       "price": 9999,
-      "image": { "src": "/images/accessories/ms900.jpg", "alt": "Dell Premier Rechargeable Mouse MS900", "width": 800, "height": 600 },
+      "image": { "src": "/images/accessories/ms900.jpg", "alt": "Cobalt Premier Rechargeable Mouse MS900", "width": 800, "height": 600 },
       "compatibleWith": ["apex-13", "apex-14", "apex-15", "apex-16-pro"]
     },
     {
       "id": "acc-sleeve-15",
-      "name": "Dell EcoLoop Premier Sleeve 15",
+      "name": "Cobalt EcoLoop Premier Sleeve 15",
       "price": 4999,
-      "image": { "src": "/images/accessories/sleeve15.jpg", "alt": "Dell EcoLoop Premier Sleeve 15", "width": 800, "height": 600 },
+      "image": { "src": "/images/accessories/sleeve15.jpg", "alt": "Cobalt EcoLoop Premier Sleeve 15", "width": 800, "height": 600 },
       "compatibleWith": ["apex-15", "apex-16-pro"]
     },
     {
       "id": "acc-sleeve-13",
-      "name": "Dell EcoLoop Premier Sleeve 13",
+      "name": "Cobalt EcoLoop Premier Sleeve 13",
       "price": 3999,
-      "image": { "src": "/images/accessories/sleeve13.jpg", "alt": "Dell EcoLoop Premier Sleeve 13", "width": 800, "height": 600 },
+      "image": { "src": "/images/accessories/sleeve13.jpg", "alt": "Cobalt EcoLoop Premier Sleeve 13", "width": 800, "height": 600 },
       "compatibleWith": ["apex-13", "apex-14"]
     }
   ]

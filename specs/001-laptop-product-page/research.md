@@ -1,4 +1,4 @@
-# Research — Dell Apex 15 PDP
+# Research — Cobalt Vela 15 PDP
 
 Decisions taken while drafting `plan.md`. Each entry names the choice,
 the alternatives considered, and the constitutional principle that
@@ -72,7 +72,7 @@ justifies the call.
     RadioGroup primitives that the configurator and tech-specs
     sections rely on.
   - MUI / Chakra — heavier, opinionated themes that conflict with the
-    Dell-restrained visual style.
+    Cobalt-restrained visual style.
 - **Justification**: Principle IV (Accessibility) and Principle VII —
   Radix owns keyboard and ARIA semantics; reusing it is the a11y
   strategy.

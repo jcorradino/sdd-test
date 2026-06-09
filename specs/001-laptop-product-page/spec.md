@@ -1,15 +1,15 @@
-# Feature Specification: Dell Apex 15 Product Detail Page
+# Feature Specification: Cobalt Vela 15 Product Detail Page
 
 **Feature Branch**: `001-laptop-product-page`
 **Created**: 2026-04-24
 **Status**: Draft
-**Input**: User description: "Dell-style product detail page for a configurable 15-inch laptop (the fictional Apex 15), with live price and availability, tech specs, reviews, and add-to-cart. All data from a local JSON file."
+**Input**: User description: "Cobalt-style product detail page for a configurable 15-inch laptop (the fictional Vela 15), with live price and availability, tech specs, reviews, and add-to-cart. All data from a local JSON file."
 
 ## User Scenarios & Testing *(mandatory)*
 
-### User Story 1 - Configure and buy an Apex 15 (Priority: P1)
+### User Story 1 - Configure and buy an Vela 15 (Priority: P1)
 
-A shopper lands on the Apex 15 product page, picks their preferred
+A shopper lands on the Vela 15 product page, picks their preferred
 processor, memory, storage, display, color, and warranty, watches the
 price update as they choose, and adds the configured machine to their
 cart.
@@ -41,7 +41,7 @@ other stories implemented.
 
 ### User Story 2 - Evaluate the laptop against its specs (Priority: P2)
 
-A shopper who is still deciding whether the Apex 15 fits their needs
+A shopper who is still deciding whether the Vela 15 fits their needs
 scrolls the full technical-specifications section, reads a summary of
 other customers' ratings, and sees which accessories are compatible.
 

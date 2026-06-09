@@ -1,4 +1,4 @@
-# Data Model — Dell Apex 15 PDP
+# Data Model — Cobalt Vela 15 PDP
 
 The canonical schemas live in `lib/schema.ts` (Zod). This document is
 the human-readable mirror; if the two ever disagree, the Zod source
@@ -26,10 +26,10 @@ type Dataset = {
 | Field | Type | Notes |
 |---|---|---|
 | `id` | `string` (slug) | Unique. Used in URL and as React key. |
-| `name` | `string` | "Dell Apex 15". |
+| `name` | `string` | "Cobalt Vela 15". |
 | `tagline` | `string` | One-line marketing pitch. |
 | `description` | `string` | 2–3 paragraphs. Sanitized markdown. |
-| `brand` | `"Dell"` | Single-value enum for now. |
+| `brand` | `"Cobalt"` | Single-value enum for now. |
 | `category` | `"laptop"` | Single-value enum for now. |
 | `images` | `Image[]` | ≥ 3 entries; first is hero/LCP. |
 | `basePrice` | `number` (USD cents) | Integer ≥ 0. |

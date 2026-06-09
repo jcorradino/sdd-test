@@ -2,7 +2,7 @@
 description: "Task list for 001-laptop-product-page"
 ---
 
-# Tasks: Dell Apex 15 Product Detail Page
+# Tasks: Cobalt Vela 15 Product Detail Page
 
 **Input**: Design documents from `/specs/001-laptop-product-page/`
 **Prerequisites**: spec.md, plan.md, data-model.md, contracts/, research.md

@@ -1,4 +1,4 @@
-# Implementation Plan: Dell Apex 15 Product Detail Page
+# Implementation Plan: Cobalt Vela 15 Product Detail Page
 
 **Branch**: `001-laptop-product-page` | **Date**: 2026-04-24 | **Spec**: [spec.md](./spec.md)
 **Input**: Feature specification from `/specs/001-laptop-product-page/spec.md`

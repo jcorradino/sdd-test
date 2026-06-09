@@ -1,4 +1,4 @@
-# Apex Laptops Storefront Constitution
+# Cobalt Laptops Storefront Constitution
 
 ## Core Principles
 
@@ -42,7 +42,7 @@ reachability, focus visibility, semantic landmarks, `alt` on every image,
 handling are acceptance criteria, not nice-to-haves. Zero `axe-core`
 Serious or Critical violations is a merge blocker.
 
-*Rationale:* A Dell-grade storefront that fails a screen reader is not
+*Rationale:* A Cobalt-grade storefront that fails a screen reader is not
 shippable. Treating a11y as a feature is cheaper than retrofitting it.
 
 ### V. Type Safety at Trust Boundaries
@@ -89,7 +89,7 @@ not theme, and is exempt. Every token-on-background pairing MUST satisfy
 the contrast ratios in Principle IV; a color that cannot meet AA in its
 intended role is not a valid token for that role.
 
-*Rationale:* The product imitates a Dell storefront, so an invented
+*Rationale:* The storefront is styled after the Dell Design System, so an invented
 palette undermines both the brand simulation and — because Dell Blue sits
 right at the AA threshold on white — the accessibility guarantees.
 Centralizing color in tokens makes contrast auditable in one place and
