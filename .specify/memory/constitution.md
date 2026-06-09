@@ -1,4 +1,4 @@
-# Apex Laptops Storefront Constitution
+# Cobalt Laptops Storefront Constitution
 
 ## Core Principles
 
@@ -42,7 +42,7 @@ reachability, focus visibility, semantic landmarks, `alt` on every image,
 handling are acceptance criteria, not nice-to-haves. Zero `axe-core`
 Serious or Critical violations is a merge blocker.
 
-*Rationale:* A Dell-grade storefront that fails a screen reader is not
+*Rationale:* A Cobalt-grade storefront that fails a screen reader is not
 shippable. Treating a11y as a feature is cheaper than retrofitting it.
 
 ### V. Type Safety at Trust Boundaries
@@ -76,6 +76,25 @@ Tracking entry in the feature's `plan.md`.
 *Rationale:* Radix owns the keyboard and ARIA semantics we would
 otherwise have to re-derive per component. Reuse is the a11y strategy.
 
+### VIII. Brand & Design-Token Fidelity
+All UI color — and brand expression generally — derives from Dell Design
+System (DDS) tokens, never ad-hoc values. Components consume *semantic
+role* tokens (surface/background, foreground, primary/action, secondary,
+muted, border, focus ring, and the semantic success/warning/danger/info
+roles) exposed as CSS custom properties and mapped onto the shadcn/ui
+theme. Raw hex literals in component or style code are forbidden; the
+canonical token source is `design/dds-tokens.json`. Product *data* may
+carry literal colors (e.g. a laptop finish `swatch`) — that is content,
+not theme, and is exempt. Every token-on-background pairing MUST satisfy
+the contrast ratios in Principle IV; a color that cannot meet AA in its
+intended role is not a valid token for that role.
+
+*Rationale:* The storefront is styled after the Dell Design System, so an invented
+palette undermines both the brand simulation and — because Dell Blue sits
+right at the AA threshold on white — the accessibility guarantees.
+Centralizing color in tokens makes contrast auditable in one place and
+keeps Principle IV enforceable rather than scattered across components.
+
 ## Technology Stack (Fixed)
 
 The following stack is ratified and may only be changed by amending this
@@ -83,7 +102,8 @@ constitution:
 
 - **Runtime:** Node.js 20 LTS, pnpm 9.
 - **Framework:** Next.js 15 (App Router), React 19, TypeScript strict.
-- **Styling:** Tailwind CSS v4, shadcn/ui primitives.
+- **Styling:** Tailwind CSS v4, shadcn/ui primitives themed with Dell
+  Design System (DDS) tokens (canonical source: `design/dds-tokens.json`).
 - **State:** Zustand with `persist` middleware for cart; pure reducers
   (`lib/configurator.ts`) for configuration state.
 - **Validation:** Zod.
@@ -146,4 +166,16 @@ Versioning uses SemVer applied to governance impact:
   expanded.
 - **PATCH** — clarifications, typos, non-semantic wording.
 
-**Version**: 1.0.0 | **Ratified**: 2026-04-24 | **Last Amended**: 2026-04-24
+### Amendment Log
+
+- **1.1.0** (2026-06-09) — Added Principle VIII (Brand & Design-Token
+  Fidelity) and referenced DDS tokens in the Technology Stack.
+  *Migration impact:* every feature `plan.md` Constitution Check gains a
+  Principle VIII row; UI tasks must consume DDS role tokens instead of
+  literal colors. No `spec.md` rewrites required. Dependent updates landed
+  in the same change: `.specify/templates/plan-template.md`,
+  `.windsurf/rules/design-system.md`, `design/dds-tokens.json`,
+  `README.md`, `SETUP.md`. The accessibility ruleset is unchanged — this
+  principle defers all contrast thresholds to Principle IV.
+
+**Version**: 1.1.0 | **Ratified**: 2026-04-24 | **Last Amended**: 2026-06-09

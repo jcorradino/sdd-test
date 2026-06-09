@@ -1,17 +1,17 @@
-# Apex Laptops Storefront — Windsurf SDD Sandbox
+# Cobalt Laptops Storefront — Windsurf SDD Sandbox
 
 A Spec-Driven Development project laid out for [Windsurf](https://windsurf.com)
 using the [spec-kit](https://github.com/github/spec-kit) conventions.
-The product under spec is a **Dell-style configurable laptop product
-detail page** (the fictional "Dell Apex 15"), built entirely from a
-local JSON dataset — no external network calls.
+The product under spec is a **configurable laptop product detail page**
+(the fictional "Cobalt Vela 15"), styled with the Dell Design System and
+built entirely from a local JSON dataset — no external network calls.
 
 ## Repository layout
 
 ```
 .specify/
 ├── memory/
-│   └── constitution.md          ← ratified principles (v1.0.0)
+│   └── constitution.md          ← ratified principles (v1.1.0)
 ├── templates/
 │   ├── constitution-template.md
 │   ├── spec-template.md
@@ -38,7 +38,9 @@ local JSON dataset — no external network calls.
     ├── specify-rules.md         ← managed pointer to active plan
     ├── sdd-workflow.md
     ├── stack-constraints.md
-    └── data-constraints.md
+    ├── data-constraints.md
+    ├── accessibility.md
+    └── design-system.md         ← DDS color tokens (Principle VIII)
 
 specs/
 ├── 001-laptop-product-page/     ← worked example, fully planned
@@ -56,7 +58,17 @@ specs/
     └── spec.md
 
 data/
-└── laptops.sample.json          ← canonical sample dataset
+└── laptops.sample.json          ← canonical sample dataset (4 models)
+
+design/
+├── dds-tokens.json              ← DDS color tokens (source of truth, §VIII)
+└── README.md                    ← role→shadcn mapping + contrast notes
+
+experiments/
+└── accessibility-ab/            ← Path D: ruleset A/B protocol + harness
+    ├── README.md
+    ├── metrics.md
+    └── results-template.md
 ```
 
 ## Getting started in Windsurf
@@ -92,6 +104,8 @@ In Windsurf, run these slash commands in order:
   Lighthouse ≥ 90/95/95/95.
 - **Component Reuse** — shadcn/ui (Radix) primitives; no hand-rolled
   equivalents.
+- **Design Tokens** — all UI color from Dell Design System role tokens
+  (`design/dds-tokens.json`); no raw hex in components.
 
 See [`.specify/memory/constitution.md`](./.specify/memory/constitution.md)
 for the ratified text and amendment process.

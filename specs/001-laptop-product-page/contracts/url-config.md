@@ -41,6 +41,6 @@ server reflects the user's chosen price (no hydration flash).
 
 | Selection | URL |
 |---|---|
-| All defaults | `/products/apex-15` |
-| 32 GB RAM, OLED | `/products/apex-15?c=cpu-u5-125h,ram-32,ssd-512,disp-oled,color-platinum,war-1y` |
+| All defaults | `/products/vela-15` |
+| 32 GB RAM, OLED | `/products/vela-15?c=cpu-u5-125h,ram-32,ssd-512,disp-oled,color-platinum,war-1y` |
 | Invalid token in slot 3 | falls back: `ssd-512` becomes default |

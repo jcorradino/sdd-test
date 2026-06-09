@@ -7,9 +7,11 @@
 
 ## Clarifications
 
-- [NEEDS CLARIFICATION: Should the user-case taxonomy (e.g. "Developer", "Creator", "Gaming", "Everyday") be a filter facet, and if so, where does the tag come from — a new `useCases: string[]` field on `Product`, or derived from CPU/RAM thresholds?]
-- [NEEDS CLARIFICATION: Pagination strategy — server-side numbered pages, "Load more" button, or infinite scroll? Each has a11y and SEO trade-offs.]
-- [NEEDS CLARIFICATION: When a filter combination yields zero results, do we show an empty state with "Reset filters" only, or do we also surface the closest-matching subset of products?]
+### Session 2026-06-09
+
+- Q: Should a use-case taxonomy (Developer/Creator/Gaming/Everyday) be a filter facet, and where would the tag come from? → A: Out of scope this milestone — no use-case facet. Filters stay price, screen size, color, and badge. Revisit with an explicit `useCases: string[]` field if it returns.
+- Q: Pagination strategy — numbered pages, "Load more", or infinite scroll? → A: A "Load more" button revealing 12 more products per activation (best keyboard/SEO behavior; with the current dataset it never triggers).
+- Q: On zero results, empty state with "Reset all filters" only, or also surface closest-matching products? → A: Empty state with a single "Reset all filters" action only — no closest-match fallback.
 
 ## User Scenarios & Testing *(mandatory)*
 
@@ -70,8 +72,8 @@ screen-size filter, see the card count update, change the sort to
    query string and the same set of products is displayed.
 3. **Given** filters yielding zero results,
    **When** the result list updates, **Then** an empty state offers a
-   one-click "Reset all filters" action [NEEDS CLARIFICATION: see
-   open question above].
+   one-click "Reset all filters" action and no other results (no
+   closest-match fallback).
 4. **Given** the user changes the sort to "Price: low to high",
    **When** the list re-renders, **Then** results are ordered by
    ascending starting price; equal prices break ties by name A→Z.
@@ -138,9 +140,10 @@ and clear the field to restore the full list.
   visible relative to the total (e.g. "Showing 3 of 7 laptops").
 - **FR-009**: Each card MUST be a navigable link to the corresponding
   PDP at `/products/<productId>`.
-- **FR-010**: Pagination MUST be applied when the visible result count
-  exceeds [NEEDS CLARIFICATION: page size threshold; suggest 12 once
-  the dataset grows].
+- **FR-010**: Pagination MUST use a "Load more" control that reveals 12
+  additional products per activation once the visible result count
+  exceeds 12. The control MUST be keyboard-operable and MUST NOT rely on
+  scroll position (no infinite scroll).
 
 ### Non-Functional Requirements
 
@@ -194,6 +197,8 @@ and clear the field to restore the full list.
 
 ## Out of Scope
 
+- A use-case taxonomy facet (Developer / Creator / Gaming / Everyday);
+  deferred until there is an explicit `useCases` field to drive it.
 - Faceted result counts ("Color: Graphite (3)") — too noisy for the
   current dataset size; revisit if catalog grows past 20 SKUs.
 - Saved searches, alerts, or back-in-stock notifications.

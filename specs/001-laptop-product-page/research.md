@@ -1,4 +1,4 @@
-# Research — Dell Apex 15 PDP
+# Research — Cobalt Vela 15 PDP
 
 Decisions taken while drafting `plan.md`. Each entry names the choice,
 the alternatives considered, and the constitutional principle that
@@ -52,7 +52,7 @@ justifies the call.
 
 ## R-004 — Cart state: Zustand + `persist`
 
-- **Decision**: Zustand store keyed `apex.cart.v1` with the official
+- **Decision**: Zustand store keyed `vela.cart.v1` with the official
   `persist` middleware writing to `localStorage`.
 - **Alternatives considered**:
   - React Context + manual localStorage sync — error-prone around SSR
@@ -72,7 +72,7 @@ justifies the call.
     RadioGroup primitives that the configurator and tech-specs
     sections rely on.
   - MUI / Chakra — heavier, opinionated themes that conflict with the
-    Dell-restrained visual style.
+    Cobalt-restrained visual style.
 - **Justification**: Principle IV (Accessibility) and Principle VII —
   Radix owns keyboard and ARIA semantics; reusing it is the a11y
   strategy.

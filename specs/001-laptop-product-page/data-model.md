@@ -1,4 +1,4 @@
-# Data Model — Dell Apex 15 PDP
+# Data Model — Cobalt Vela 15 PDP
 
 The canonical schemas live in `lib/schema.ts` (Zod). This document is
 the human-readable mirror; if the two ever disagree, the Zod source
@@ -26,10 +26,10 @@ type Dataset = {
 | Field | Type | Notes |
 |---|---|---|
 | `id` | `string` (slug) | Unique. Used in URL and as React key. |
-| `name` | `string` | "Dell Apex 15". |
+| `name` | `string` | "Cobalt Vela 15". |
 | `tagline` | `string` | One-line marketing pitch. |
 | `description` | `string` | 2–3 paragraphs. Sanitized markdown. |
-| `brand` | `"Dell"` | Single-value enum for now. |
+| `brand` | `"Cobalt"` | Single-value enum for now. |
 | `category` | `"laptop"` | Single-value enum for now. |
 | `images` | `Image[]` | ≥ 3 entries; first is hero/LCP. |
 | `basePrice` | `number` (USD cents) | Integer ≥ 0. |
@@ -136,7 +136,7 @@ Closed enum: `"New" | "Best Seller" | "Energy Star" | "EPEAT Gold"`.
 
 ## Cart (client-only)
 
-Persisted in `localStorage` under key `apex.cart.v1`.
+Persisted in `localStorage` under key `vela.cart.v1`.
 
 ```ts
 type Cart = {
@@ -161,8 +161,8 @@ type CartLine = {
 - `quantity ∈ [1, 5]` per line.
 - `lines[i].id === lines[i].configuredSku`.
 - `selections` covers every `ConfigGroup.id` for the parent product.
-- On schema-version mismatch (e.g. future `apex.cart.v2` reading
-  `apex.cart.v1`), the store resets silently.
+- On schema-version mismatch (e.g. future `vela.cart.v2` reading
+  `vela.cart.v1`), the store resets silently.
 
 ## Derived values
 

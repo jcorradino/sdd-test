@@ -34,6 +34,7 @@ For each principle in `.specify/memory/constitution.md`, state compliance:
 | V. Type Safety at Trust Boundaries | ✅ | [why] |
 | VI. Performance Budget Enforcement | ✅ | [why] |
 | VII. Component Primitive Reuse | ✅ | [why] |
+| VIII. Brand & Design-Token Fidelity | ✅ | [why — UI color from DDS role tokens in `design/dds-tokens.json`, no raw hex] |
 
 Any ❌ must appear in Complexity Tracking with a justification.
 

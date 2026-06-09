@@ -1,17 +1,17 @@
 {
-  "_comment": "Reference shape for data/laptops.json. Replace with the real, fully-populated file during implementation. Prices are in USD cents.",
+  "_comment": "Reference dataset for data/laptops.json. Prices are in USD cents. Contains 4 laptop models so the catalog (002) and recently-viewed (003) features have real variety in price tier, screen size, color, and badge. All option SKUs are globally unique; non-vela-15 SKUs are product-prefixed. Validated against contracts/dataset.schema.ts.",
   "products": [
     {
-      "id": "apex-15",
-      "name": "Dell Apex 15",
+      "id": "vela-15",
+      "name": "Cobalt Vela 15",
       "tagline": "Creator-grade performance in a 15-inch frame.",
-      "description": "The Apex 15 pairs Intel Core Ultra processors with a factory-calibrated OLED option and an all-aluminum chassis. Built for developers and creators who need a quiet, cool workstation that travels.\n\nWith up to 64 GB of LPDDR5x memory and 4 TB of PCIe Gen4 storage, the Apex 15 scales from light coding to 4K video work without breaking a sweat.",
-      "brand": "Dell",
+      "description": "The Vela 15 pairs Intel Core Ultra processors with a factory-calibrated OLED option and an all-aluminum chassis. Built for developers and creators who need a quiet, cool workstation that travels.\n\nWith up to 64 GB of LPDDR5x memory and 4 TB of PCIe Gen4 storage, the Vela 15 scales from light coding to 4K video work without breaking a sweat.",
+      "brand": "Cobalt",
       "category": "laptop",
       "images": [
-        { "src": "/images/apex-15/hero.jpg", "alt": "Dell Apex 15 open on a desk, front three-quarter view", "width": 1600, "height": 1200 },
-        { "src": "/images/apex-15/side.jpg", "alt": "Dell Apex 15 side profile showing port layout", "width": 1600, "height": 1200 },
-        { "src": "/images/apex-15/keyboard.jpg", "alt": "Close-up of the Apex 15 backlit keyboard and trackpad", "width": 1600, "height": 1200 }
+        { "src": "/images/vela-15/hero.jpg", "alt": "Cobalt Vela 15 open on a desk, front three-quarter view", "width": 1600, "height": 1200 },
+        { "src": "/images/vela-15/side.jpg", "alt": "Cobalt Vela 15 side profile showing port layout", "width": 1600, "height": 1200 },
+        { "src": "/images/vela-15/keyboard.jpg", "alt": "Close-up of the Vela 15 backlit keyboard and trackpad", "width": 1600, "height": 1200 }
       ],
       "basePrice": 189900,
       "currency": "USD",
@@ -24,7 +24,7 @@
           "helpText": "Choose the engine that fits your workload.",
           "required": true,
           "options": [
-            { "sku": "cpu-u5-125h", "label": "Intel Core Ultra 5 125H", "sublabel": "14 cores, up to 4.5 GHz", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "cpu-u5-125h", "label": "Intel Core Ultra 5 125H", "sublabel": "14 cores, up to 4.5 GHz", "priceDelta": 0, "default": true, "inStock": true, "incompatibleWith": ["ram-64"] },
             { "sku": "cpu-u7-155h", "label": "Intel Core Ultra 7 155H", "sublabel": "16 cores, up to 4.8 GHz", "priceDelta": 20000, "default": false, "inStock": true },
             { "sku": "cpu-u9-185h", "label": "Intel Core Ultra 9 185H", "sublabel": "16 cores, up to 5.1 GHz", "priceDelta": 45000, "default": false, "inStock": false }
           ]
@@ -145,7 +145,7 @@
         }
       ],
       "inTheBox": [
-        "Dell Apex 15 laptop",
+        "Cobalt Vela 15 laptop",
         "130 W USB-C power adapter",
         "Quick-start guide",
         "Safety and regulatory information"
@@ -159,10 +159,421 @@
         ]
       },
       "releaseDate": "2026-03-01"
+    },
+    {
+      "id": "vela-13",
+      "name": "Cobalt Vela 13",
+      "tagline": "Ultraportable power for life on the move.",
+      "description": "At just over a kilogram, the Vela 13 disappears into a bag yet still runs Intel Core Ultra silicon and a bright FHD+ panel. It is the pick for commuters, students, and anyone who values reach over raw horsepower.\n\nA 65 W USB-C charger and all-day battery keep it light without compromising a full work day away from the desk.",
+      "brand": "Cobalt",
+      "category": "laptop",
+      "images": [
+        { "src": "/images/vela-13/hero.jpg", "alt": "Cobalt Vela 13 open on a cafe table, front three-quarter view", "width": 1600, "height": 1200 },
+        { "src": "/images/vela-13/side.jpg", "alt": "Cobalt Vela 13 thin side profile", "width": 1600, "height": 1200 },
+        { "src": "/images/vela-13/lid.jpg", "alt": "Cobalt Vela 13 closed, showing the platinum lid finish", "width": 1600, "height": 1200 }
+      ],
+      "basePrice": 119900,
+      "currency": "USD",
+      "rating": { "average": 4.4, "count": 612 },
+      "badges": ["Best Seller"],
+      "configurable": [
+        {
+          "id": "cpu",
+          "label": "Processor",
+          "helpText": "Efficient cores tuned for portability.",
+          "required": true,
+          "options": [
+            { "sku": "v13-cpu-u5", "label": "Intel Core Ultra 5 125U", "sublabel": "12 cores, up to 4.3 GHz", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v13-cpu-u7", "label": "Intel Core Ultra 7 155U", "sublabel": "12 cores, up to 4.8 GHz", "priceDelta": 15000, "default": false, "inStock": true }
+          ]
+        },
+        {
+          "id": "ram",
+          "label": "Memory",
+          "required": true,
+          "options": [
+            { "sku": "v13-ram-16", "label": "16 GB LPDDR5x, 6400 MT/s", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v13-ram-32", "label": "32 GB LPDDR5x, 6400 MT/s", "priceDelta": 12000, "default": false, "inStock": true }
+          ]
+        },
+        {
+          "id": "storage",
+          "label": "Storage",
+          "required": true,
+          "options": [
+            { "sku": "v13-ssd-256", "label": "256 GB PCIe Gen4 NVMe SSD", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v13-ssd-512", "label": "512 GB PCIe Gen4 NVMe SSD", "priceDelta": 8000, "default": false, "inStock": true },
+            { "sku": "v13-ssd-1tb", "label": "1 TB PCIe Gen4 NVMe SSD", "priceDelta": 18000, "default": false, "inStock": true }
+          ]
+        },
+        {
+          "id": "display",
+          "label": "Display",
+          "required": true,
+          "options": [
+            { "sku": "v13-disp-fhd", "label": "13.4\" FHD+ 1920×1200, 60 Hz IPS", "priceDelta": 0, "default": true, "inStock": true }
+          ]
+        },
+        {
+          "id": "color",
+          "label": "Color",
+          "required": true,
+          "options": [
+            { "sku": "v13-color-platinum", "label": "Platinum Silver", "swatch": "#C0C2C4", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v13-color-graphite", "label": "Graphite", "swatch": "#2B2F33", "priceDelta": 0, "default": false, "inStock": true }
+          ]
+        },
+        {
+          "id": "warranty",
+          "label": "Warranty",
+          "required": true,
+          "options": [
+            { "sku": "v13-war-1y", "label": "1-year limited hardware warranty", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v13-war-3y", "label": "3-year Premium Support Plus", "priceDelta": 20000, "default": false, "inStock": true }
+          ]
+        }
+      ],
+      "specs": [
+        {
+          "id": "processor",
+          "label": "Processor",
+          "rows": [
+            { "label": "Family", "value": "Intel Core Ultra (U-series)", "highlight": true },
+            { "label": "Integrated graphics", "value": "Intel Graphics" }
+          ]
+        },
+        {
+          "id": "display",
+          "label": "Display",
+          "rows": [
+            { "label": "Size", "value": "13.4 inches" },
+            { "label": "Refresh rate", "value": "60 Hz" }
+          ]
+        },
+        {
+          "id": "ports",
+          "label": "Ports & Slots",
+          "rows": [
+            { "label": "Thunderbolt 4", "value": "2" },
+            { "label": "Audio", "value": "3.5 mm combo" }
+          ]
+        },
+        {
+          "id": "battery",
+          "label": "Battery & Power",
+          "rows": [
+            { "label": "Battery", "value": "60 Wh, 4-cell" },
+            { "label": "Charger", "value": "65 W USB-C" }
+          ]
+        },
+        {
+          "id": "dimensions",
+          "label": "Dimensions & Weight",
+          "rows": [
+            { "label": "Weight (starting)", "value": "1.17 kg" }
+          ]
+        },
+        {
+          "id": "os",
+          "label": "Operating System",
+          "rows": [
+            { "label": "Shipping OS", "value": "Windows 11 Home" }
+          ]
+        }
+      ],
+      "inTheBox": [
+        "Cobalt Vela 13 laptop",
+        "65 W USB-C power adapter",
+        "Quick-start guide",
+        "Safety and regulatory information"
+      ],
+      "warranty": {
+        "defaultSku": "v13-war-1y",
+        "options": [
+          { "sku": "v13-war-1y", "label": "1-year limited hardware warranty" },
+          { "sku": "v13-war-3y", "label": "3-year Premium Support Plus" }
+        ]
+      },
+      "releaseDate": "2026-02-15"
+    },
+    {
+      "id": "vela-14",
+      "name": "Cobalt Vela 14",
+      "tagline": "The everyday business workhorse.",
+      "description": "The Vela 14 balances a compact 14-inch footprint with the ports and security features IT teams expect. A 120 Hz panel keeps scrolling and video calls smooth through the workday.\n\nConfigurable memory and storage let it flex from a fleet machine to a power user's daily driver.",
+      "brand": "Cobalt",
+      "category": "laptop",
+      "images": [
+        { "src": "/images/vela-14/hero.jpg", "alt": "Cobalt Vela 14 open at a desk, front three-quarter view", "width": 1600, "height": 1200 },
+        { "src": "/images/vela-14/side.jpg", "alt": "Cobalt Vela 14 side profile showing port layout", "width": 1600, "height": 1200 },
+        { "src": "/images/vela-14/keyboard.jpg", "alt": "Close-up of the Vela 14 keyboard and fingerprint reader", "width": 1600, "height": 1200 }
+      ],
+      "basePrice": 149900,
+      "currency": "USD",
+      "rating": { "average": 4.5, "count": 521 },
+      "badges": ["Energy Star"],
+      "configurable": [
+        {
+          "id": "cpu",
+          "label": "Processor",
+          "required": true,
+          "options": [
+            { "sku": "v14-cpu-u5", "label": "Intel Core Ultra 5 125H", "sublabel": "14 cores, up to 4.5 GHz", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v14-cpu-u7", "label": "Intel Core Ultra 7 155H", "sublabel": "16 cores, up to 4.8 GHz", "priceDelta": 18000, "default": false, "inStock": true }
+          ]
+        },
+        {
+          "id": "ram",
+          "label": "Memory",
+          "required": true,
+          "options": [
+            { "sku": "v14-ram-16", "label": "16 GB LPDDR5x, 6400 MT/s", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v14-ram-32", "label": "32 GB LPDDR5x, 6400 MT/s", "priceDelta": 14000, "default": false, "inStock": true }
+          ]
+        },
+        {
+          "id": "storage",
+          "label": "Storage",
+          "required": true,
+          "options": [
+            { "sku": "v14-ssd-512", "label": "512 GB PCIe Gen4 NVMe SSD", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v14-ssd-1tb", "label": "1 TB PCIe Gen4 NVMe SSD", "priceDelta": 10000, "default": false, "inStock": true }
+          ]
+        },
+        {
+          "id": "display",
+          "label": "Display",
+          "required": true,
+          "options": [
+            { "sku": "v14-disp-fhd", "label": "14\" FHD+ 1920×1200, 120 Hz IPS", "priceDelta": 0, "default": true, "inStock": true }
+          ]
+        },
+        {
+          "id": "color",
+          "label": "Color",
+          "required": true,
+          "options": [
+            { "sku": "v14-color-platinum", "label": "Platinum Silver", "swatch": "#C0C2C4", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v14-color-graphite", "label": "Graphite", "swatch": "#2B2F33", "priceDelta": 0, "default": false, "inStock": true },
+            { "sku": "v14-color-midnight", "label": "Midnight Blue", "swatch": "#1A2A44", "priceDelta": 0, "default": false, "inStock": false }
+          ]
+        },
+        {
+          "id": "warranty",
+          "label": "Warranty",
+          "required": true,
+          "options": [
+            { "sku": "v14-war-1y", "label": "1-year limited hardware warranty", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v14-war-3y", "label": "3-year Premium Support Plus", "priceDelta": 22000, "default": false, "inStock": true },
+            { "sku": "v14-war-4y", "label": "4-year Premium Support Plus with Accidental Damage", "priceDelta": 38000, "default": false, "inStock": true }
+          ]
+        }
+      ],
+      "specs": [
+        {
+          "id": "processor",
+          "label": "Processor",
+          "rows": [
+            { "label": "Family", "value": "Intel Core Ultra", "highlight": true },
+            { "label": "Integrated graphics", "value": "Intel Arc Graphics" }
+          ]
+        },
+        {
+          "id": "display",
+          "label": "Display",
+          "rows": [
+            { "label": "Size", "value": "14 inches" },
+            { "label": "Refresh rate", "value": "120 Hz" }
+          ]
+        },
+        {
+          "id": "ports",
+          "label": "Ports & Slots",
+          "rows": [
+            { "label": "Thunderbolt 4", "value": "2" },
+            { "label": "USB-A 3.2", "value": "1" },
+            { "label": "HDMI", "value": "2.1" }
+          ]
+        },
+        {
+          "id": "battery",
+          "label": "Battery & Power",
+          "rows": [
+            { "label": "Battery", "value": "70 Wh, 4-cell" },
+            { "label": "Charger", "value": "100 W USB-C" }
+          ]
+        },
+        {
+          "id": "os",
+          "label": "Operating System",
+          "rows": [
+            { "label": "Shipping OS", "value": "Windows 11 Pro" }
+          ]
+        }
+      ],
+      "inTheBox": [
+        "Cobalt Vela 14 laptop",
+        "100 W USB-C power adapter",
+        "Quick-start guide",
+        "Safety and regulatory information"
+      ],
+      "warranty": {
+        "defaultSku": "v14-war-1y",
+        "options": [
+          { "sku": "v14-war-1y", "label": "1-year limited hardware warranty" },
+          { "sku": "v14-war-3y", "label": "3-year Premium Support Plus" },
+          { "sku": "v14-war-4y", "label": "4-year Premium Support Plus with Accidental Damage" }
+        ]
+      },
+      "releaseDate": "2026-01-20"
+    },
+    {
+      "id": "vela-16-pro",
+      "name": "Cobalt Vela 16 Pro",
+      "tagline": "Desktop-class creation in a 16-inch frame.",
+      "description": "The Vela 16 Pro pairs Intel Core Ultra H-series processors with discrete NVIDIA graphics and a 16-inch high-refresh display. It is built for 3D, video, and ML workloads that overwhelm an integrated GPU.\n\nA vapor-chamber cooling system holds clocks high under sustained load, while up to 64 GB of memory keeps large projects resident.",
+      "brand": "Cobalt",
+      "category": "laptop",
+      "images": [
+        { "src": "/images/vela-16-pro/hero.jpg", "alt": "Cobalt Vela 16 Pro open on a studio desk, front three-quarter view", "width": 1600, "height": 1200 },
+        { "src": "/images/vela-16-pro/side.jpg", "alt": "Cobalt Vela 16 Pro side profile showing cooling vents", "width": 1600, "height": 1200 },
+        { "src": "/images/vela-16-pro/screen.jpg", "alt": "Cobalt Vela 16 Pro displaying a 3D rendering application", "width": 1600, "height": 1200 }
+      ],
+      "basePrice": 249900,
+      "currency": "USD",
+      "rating": { "average": 4.7, "count": 348 },
+      "badges": ["New", "EPEAT Gold"],
+      "configurable": [
+        {
+          "id": "cpu",
+          "label": "Processor",
+          "helpText": "H-series silicon for sustained heavy lifting.",
+          "required": true,
+          "options": [
+            { "sku": "v16-cpu-u7", "label": "Intel Core Ultra 7 165H", "sublabel": "16 cores, up to 5.0 GHz", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v16-cpu-u9", "label": "Intel Core Ultra 9 185H", "sublabel": "16 cores, up to 5.1 GHz", "priceDelta": 40000, "default": false, "inStock": true }
+          ]
+        },
+        {
+          "id": "ram",
+          "label": "Memory",
+          "required": true,
+          "options": [
+            { "sku": "v16-ram-16", "label": "16 GB DDR5, 5600 MT/s", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v16-ram-32", "label": "32 GB DDR5, 5600 MT/s", "priceDelta": 15000, "default": false, "inStock": true },
+            { "sku": "v16-ram-64", "label": "64 GB DDR5, 5600 MT/s", "priceDelta": 38000, "default": false, "inStock": true }
+          ]
+        },
+        {
+          "id": "storage",
+          "label": "Storage",
+          "required": true,
+          "options": [
+            { "sku": "v16-ssd-512", "label": "512 GB PCIe Gen4 NVMe SSD", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v16-ssd-1tb", "label": "1 TB PCIe Gen4 NVMe SSD", "priceDelta": 10000, "default": false, "inStock": true },
+            { "sku": "v16-ssd-2tb", "label": "2 TB PCIe Gen4 NVMe SSD", "priceDelta": 24000, "default": false, "inStock": true }
+          ]
+        },
+        {
+          "id": "display",
+          "label": "Display",
+          "required": true,
+          "options": [
+            { "sku": "v16-disp-qhd", "label": "16\" QHD+ 2560×1600, 165 Hz IPS", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v16-disp-oled", "label": "16\" 4K OLED 3840×2400, 120 Hz, touch", "priceDelta": 40000, "default": false, "inStock": true }
+          ]
+        },
+        {
+          "id": "color",
+          "label": "Color",
+          "required": true,
+          "options": [
+            { "sku": "v16-color-graphite", "label": "Graphite", "swatch": "#2B2F33", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v16-color-midnight", "label": "Midnight Blue", "swatch": "#1A2A44", "priceDelta": 0, "default": false, "inStock": true }
+          ]
+        },
+        {
+          "id": "warranty",
+          "label": "Warranty",
+          "required": true,
+          "options": [
+            { "sku": "v16-war-1y", "label": "1-year limited hardware warranty", "priceDelta": 0, "default": true, "inStock": true },
+            { "sku": "v16-war-3y", "label": "3-year Premium Support Plus", "priceDelta": 25000, "default": false, "inStock": true },
+            { "sku": "v16-war-4y", "label": "4-year Premium Support Plus with Accidental Damage", "priceDelta": 42000, "default": false, "inStock": true }
+          ]
+        }
+      ],
+      "specs": [
+        {
+          "id": "processor",
+          "label": "Processor",
+          "rows": [
+            { "label": "Family", "value": "Intel Core Ultra (H-series)", "highlight": true },
+            { "label": "Cache", "value": "Up to 24 MB" }
+          ]
+        },
+        {
+          "id": "graphics",
+          "label": "Graphics",
+          "rows": [
+            { "label": "Discrete GPU", "value": "NVIDIA GeForce RTX 4060, 8 GB GDDR6", "highlight": true },
+            { "label": "Integrated GPU", "value": "Intel Arc Graphics" }
+          ]
+        },
+        {
+          "id": "display",
+          "label": "Display",
+          "rows": [
+            { "label": "Size", "value": "16 inches" },
+            { "label": "Refresh rate", "value": "Up to 165 Hz" },
+            { "label": "Color gamut", "value": "100% DCI-P3 (OLED)" }
+          ]
+        },
+        {
+          "id": "ports",
+          "label": "Ports & Slots",
+          "rows": [
+            { "label": "Thunderbolt 4", "value": "2" },
+            { "label": "USB-A 3.2", "value": "2" },
+            { "label": "HDMI", "value": "2.1" },
+            { "label": "SD card", "value": "UHS-II" }
+          ]
+        },
+        {
+          "id": "battery",
+          "label": "Battery & Power",
+          "rows": [
+            { "label": "Battery", "value": "99.9 Wh, 6-cell" },
+            { "label": "Charger", "value": "240 W USB-C" }
+          ]
+        },
+        {
+          "id": "os",
+          "label": "Operating System",
+          "rows": [
+            { "label": "Shipping OS", "value": "Windows 11 Pro" }
+          ]
+        }
+      ],
+      "inTheBox": [
+        "Cobalt Vela 16 Pro laptop",
+        "240 W USB-C power adapter",
+        "Quick-start guide",
+        "Safety and regulatory information"
+      ],
+      "warranty": {
+        "defaultSku": "v16-war-1y",
+        "options": [
+          { "sku": "v16-war-1y", "label": "1-year limited hardware warranty" },
+          { "sku": "v16-war-3y", "label": "3-year Premium Support Plus" },
+          { "sku": "v16-war-4y", "label": "4-year Premium Support Plus with Accidental Damage" }
+        ]
+      },
+      "releaseDate": "2026-05-10"
     }
   ],
   "reviews": {
-    "apex-15": [
+    "vela-15": [
       {
         "id": "r-001",
         "author": "Priya S.",
@@ -178,7 +589,7 @@
         "author": "Marcus W.",
         "rating": 4,
         "title": "Great machine, loud charger coil whine",
-        "body": "Love the build quality and the keyboard is excellent. One star off because the included charger has a faint coil whine at low loads. Dell support sent a replacement quickly.",
+        "body": "Love the build quality and the keyboard is excellent. One star off because the included charger has a faint coil whine at low loads. Cobalt support sent a replacement quickly.",
         "verifiedPurchase": true,
         "createdAt": "2026-03-20",
         "helpfulCount": 17
@@ -188,34 +599,107 @@
         "author": "Elena R.",
         "rating": 5,
         "title": "Replaced my MacBook",
-        "body": "Coming from a 14\" MBP, the Apex 15 feels just as premium with more ports and a better display for the price.",
+        "body": "Coming from a 14\" MBP, the Vela 15 feels just as premium with more ports and a better display for the price.",
         "verifiedPurchase": false,
         "createdAt": "2026-04-02",
         "helpfulCount": 9
+      }
+    ],
+    "vela-13": [
+      {
+        "id": "r-101",
+        "author": "Tomas L.",
+        "rating": 5,
+        "title": "Perfect commuter laptop",
+        "body": "Barely feel it in my backpack and it lasts a full day of meetings on a charge. The 65 W charger is tiny too.",
+        "verifiedPurchase": true,
+        "createdAt": "2026-03-02",
+        "helpfulCount": 23
+      },
+      {
+        "id": "r-102",
+        "author": "Dana K.",
+        "rating": 4,
+        "title": "Light and capable, wish it had more ports",
+        "body": "Great for writing and browsing. Two USB-C ports only, so I travel with a small hub. Screen is sharp but 60 Hz after using a 120 Hz phone is noticeable.",
+        "verifiedPurchase": true,
+        "createdAt": "2026-03-18",
+        "helpfulCount": 11
+      }
+    ],
+    "vela-14": [
+      {
+        "id": "r-201",
+        "author": "Ravi N.",
+        "rating": 5,
+        "title": "Our standard fleet laptop now",
+        "body": "Rolled out 40 of these to the team. Easy to service, solid keyboard, and the fingerprint reader just works with Windows Hello.",
+        "verifiedPurchase": true,
+        "createdAt": "2026-02-10",
+        "helpfulCount": 31
+      },
+      {
+        "id": "r-202",
+        "author": "Sofia M.",
+        "rating": 4,
+        "title": "Great balance of size and power",
+        "body": "The 14-inch size is the sweet spot for me. 120 Hz makes everything feel smooth. Battery is good but not class-leading.",
+        "verifiedPurchase": true,
+        "createdAt": "2026-02-28",
+        "helpfulCount": 14
+      }
+    ],
+    "vela-16-pro": [
+      {
+        "id": "r-301",
+        "author": "Owen P.",
+        "rating": 5,
+        "title": "Renders that used to need my desktop",
+        "body": "The RTX 4060 plus 64 GB option chews through Blender scenes. Stays cool under sustained load thanks to the vapor chamber.",
+        "verifiedPurchase": true,
+        "createdAt": "2026-05-20",
+        "helpfulCount": 28
+      },
+      {
+        "id": "r-302",
+        "author": "Hana T.",
+        "rating": 4,
+        "title": "Powerful but heavy",
+        "body": "The 4K OLED is stunning for color grading. Just know it's a true desktop replacement, not something you carry all day. The 240 W charger is chunky.",
+        "verifiedPurchase": true,
+        "createdAt": "2026-05-29",
+        "helpfulCount": 19
       }
     ]
   },
   "accessories": [
     {
       "id": "acc-dock-wd22",
-      "name": "Dell Thunderbolt Dock WD22TB4",
+      "name": "Cobalt Thunderbolt Dock WD22TB4",
       "price": 32900,
-      "image": { "src": "/images/accessories/wd22tb4.jpg", "alt": "Dell Thunderbolt Dock WD22TB4", "width": 800, "height": 600 },
-      "compatibleWith": ["apex-15"]
+      "image": { "src": "/images/accessories/wd22tb4.jpg", "alt": "Cobalt Thunderbolt Dock WD22TB4", "width": 800, "height": 600 },
+      "compatibleWith": ["vela-13", "vela-14", "vela-15", "vela-16-pro"]
     },
     {
       "id": "acc-mouse-ms900",
-      "name": "Dell Premier Rechargeable Mouse MS900",
+      "name": "Cobalt Premier Rechargeable Mouse MS900",
       "price": 9999,
-      "image": { "src": "/images/accessories/ms900.jpg", "alt": "Dell Premier Rechargeable Mouse MS900", "width": 800, "height": 600 },
-      "compatibleWith": ["apex-15"]
+      "image": { "src": "/images/accessories/ms900.jpg", "alt": "Cobalt Premier Rechargeable Mouse MS900", "width": 800, "height": 600 },
+      "compatibleWith": ["vela-13", "vela-14", "vela-15", "vela-16-pro"]
     },
     {
       "id": "acc-sleeve-15",
-      "name": "Dell EcoLoop Premier Sleeve 15",
+      "name": "Cobalt EcoLoop Premier Sleeve 15",
       "price": 4999,
-      "image": { "src": "/images/accessories/sleeve15.jpg", "alt": "Dell EcoLoop Premier Sleeve 15", "width": 800, "height": 600 },
-      "compatibleWith": ["apex-15"]
+      "image": { "src": "/images/accessories/sleeve15.jpg", "alt": "Cobalt EcoLoop Premier Sleeve 15", "width": 800, "height": 600 },
+      "compatibleWith": ["vela-15", "vela-16-pro"]
+    },
+    {
+      "id": "acc-sleeve-13",
+      "name": "Cobalt EcoLoop Premier Sleeve 13",
+      "price": 3999,
+      "image": { "src": "/images/accessories/sleeve13.jpg", "alt": "Cobalt EcoLoop Premier Sleeve 13", "width": 800, "height": 600 },
+      "compatibleWith": ["vela-13", "vela-14"]
     }
   ]
 }

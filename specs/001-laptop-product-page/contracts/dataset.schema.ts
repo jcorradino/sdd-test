@@ -1,4 +1,4 @@
-// Canonical Zod contracts for the Apex 15 PDP dataset.
+// Canonical Zod contracts for the Vela 15 PDP dataset.
 //
 // This file is the SOURCE OF TRUTH for all dataset shapes. The
 // implementation in `lib/schema.ts` MUST match this file exactly (it
@@ -102,7 +102,7 @@ export const Product = z.object({
   name: z.string().min(1),
   tagline: z.string().min(1),
   description: z.string().min(1),
-  brand: z.literal("Dell"),
+  brand: z.literal("Cobalt"),
   category: z.literal("laptop"),
   images: z.array(Image).min(3),
   basePrice: z.number().int().nonnegative(),

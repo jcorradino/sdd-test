@@ -1,0 +1,92 @@
+{
+  "_meta": {
+    "purpose": "Canonical color tokens for the Cobalt storefront, themed after the Dell Design System (DDS). Source of truth for Constitution Principle VIII.",
+    "reference": "https://www.delldesignsystem.com/foundations/color",
+    "provenance": {
+      "confirmed": [
+        "brand.dellBlue (#0076CE) — Dell's public brand blue (color-name.com, brandpalettes.com). Pantone refs also cite #007DB8."
+      ],
+      "seeded": "Neutral ramp and semantic roles are principled seed values, NOT pulled from the DDS token set — the live DDS color page blocks automated fetch (HTTP 403). Reconcile exact hex values and official token names against the signed-in DDS site before treating these as canonical.",
+      "needsReconciliation": true
+    },
+    "usage": "Map roles.* onto the shadcn/ui CSS variables in app/globals.css and Tailwind v4 @theme. Components reference roles via utility classes (bg-primary, text-foreground, ...), never raw palette hex. See design/README.md.",
+    "contrastOwner": "All thresholds belong to Constitution Principle IV / .windsurf/rules/accessibility.md. Ratios below are informational checks, not a competing standard."
+  },
+
+  "palette": {
+    "brand": {
+      "dellBlue": "#0076CE",
+      "dellBlueStrong": "#005CB9",
+      "dellBlueAlt": "#007DB8"
+    },
+    "neutral": {
+      "white": "#FFFFFF",
+      "gray50": "#F5F6F7",
+      "gray100": "#EBECF0",
+      "gray200": "#D9DCE1",
+      "gray300": "#BCC0C7",
+      "gray400": "#9AA0A8",
+      "gray500": "#6E747D",
+      "gray600": "#4C525A",
+      "gray700": "#33373D",
+      "gray800": "#21242A",
+      "gray900": "#131417",
+      "black": "#000000"
+    },
+    "semantic": {
+      "success": "#1A7F37",
+      "warning": "#B25E00",
+      "danger": "#C5292A",
+      "info": "#0076CE"
+    }
+  },
+
+  "roles": {
+    "light": {
+      "background":            { "value": "#FFFFFF", "ref": "neutral.white" },
+      "foreground":            { "value": "#131417", "ref": "neutral.gray900", "onContrastNote": "~17:1 on background — AAA" },
+      "card":                  { "value": "#FFFFFF", "ref": "neutral.white" },
+      "card-foreground":       { "value": "#131417", "ref": "neutral.gray900" },
+      "muted":                 { "value": "#F5F6F7", "ref": "neutral.gray50" },
+      "muted-foreground":      { "value": "#6E747D", "ref": "neutral.gray500", "onContrastNote": "~5.3:1 on background — AA body" },
+      "primary":               { "value": "#0076CE", "ref": "brand.dellBlue", "onContrastNote": "white text on this is ~4.6:1 — AA for normal text, but marginal; fine for buttons" },
+      "primary-foreground":    { "value": "#FFFFFF", "ref": "neutral.white" },
+      "primary-strong":        { "value": "#005CB9", "ref": "brand.dellBlueStrong", "onContrastNote": "~6.5:1 on background — use for links / small text on white" },
+      "secondary":             { "value": "#EBECF0", "ref": "neutral.gray100" },
+      "secondary-foreground":  { "value": "#131417", "ref": "neutral.gray900" },
+      "accent":                { "value": "#EBECF0", "ref": "neutral.gray100" },
+      "accent-foreground":     { "value": "#131417", "ref": "neutral.gray900" },
+      "border":                { "value": "#D9DCE1", "ref": "neutral.gray200", "onContrastNote": "~3:1 vs background — meets non-text UI minimum" },
+      "input":                 { "value": "#D9DCE1", "ref": "neutral.gray200" },
+      "ring":                  { "value": "#0076CE", "ref": "brand.dellBlue", "onContrastNote": "focus ring vs white ~4.6:1 — clears 3:1 non-text minimum" },
+      "destructive":           { "value": "#C5292A", "ref": "semantic.danger" },
+      "destructive-foreground":{ "value": "#FFFFFF", "ref": "neutral.white" },
+      "success":               { "value": "#1A7F37", "ref": "semantic.success" },
+      "warning":               { "value": "#B25E00", "ref": "semantic.warning" },
+      "info":                  { "value": "#0076CE", "ref": "semantic.info" }
+    },
+
+    "dark": {
+      "background":            { "value": "#131417", "ref": "neutral.gray900" },
+      "foreground":            { "value": "#F5F6F7", "ref": "neutral.gray50" },
+      "card":                  { "value": "#21242A", "ref": "neutral.gray800" },
+      "card-foreground":       { "value": "#F5F6F7", "ref": "neutral.gray50" },
+      "muted":                 { "value": "#21242A", "ref": "neutral.gray800" },
+      "muted-foreground":      { "value": "#9AA0A8", "ref": "neutral.gray400" },
+      "primary":               { "value": "#4FA3E3", "ref": "—", "onContrastNote": "seed: lightened Dell Blue so text/icons clear AA on dark surfaces — reconcile with DDS dark theme" },
+      "primary-foreground":    { "value": "#0A0C0F", "ref": "—" },
+      "secondary":             { "value": "#33373D", "ref": "neutral.gray700" },
+      "secondary-foreground":  { "value": "#F5F6F7", "ref": "neutral.gray50" },
+      "accent":                { "value": "#33373D", "ref": "neutral.gray700" },
+      "accent-foreground":     { "value": "#F5F6F7", "ref": "neutral.gray50" },
+      "border":                { "value": "#33373D", "ref": "neutral.gray700" },
+      "input":                 { "value": "#33373D", "ref": "neutral.gray700" },
+      "ring":                  { "value": "#4FA3E3", "ref": "—" },
+      "destructive":           { "value": "#E5484D", "ref": "—" },
+      "destructive-foreground":{ "value": "#0A0C0F", "ref": "—" },
+      "success":               { "value": "#3FB950", "ref": "—" },
+      "warning":               { "value": "#D29922", "ref": "—" },
+      "info":                  { "value": "#4FA3E3", "ref": "—" }
+    }
+  }
+}

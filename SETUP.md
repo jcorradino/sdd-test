@@ -56,6 +56,7 @@ without errors:
 
 - `accessibility`
 - `data-constraints`
+- `design-system`
 - `sdd-workflow`
 - `specify-rules`
 - `stack-constraints`
@@ -69,6 +70,7 @@ without errors:
 | **A** | Implement the already-planned feature `001` end-to-end | ~30–60 min |
 | **B** | Drive feature `003` through the full SDD flow (clarify → implement) | ~60–90 min |
 | **C** | Specify and implement a brand-new feature | open-ended |
+| **D** | A/B test an accessibility ruleset by building one feature twice | ~2× a feature |
 
 Most users should run **Path A first** to see the agent produce real
 code, then **Path B** to exercise the full workflow.
@@ -146,7 +148,7 @@ workflow.
 ```bash
 pnpm install      # if not already done by Phase 1
 pnpm dev
-# open http://localhost:3000/products/apex-15
+# open http://localhost:3000/products/vela-15
 ```
 
 Run every quality gate:
@@ -259,6 +261,57 @@ clarifications-needed markers.
 
 Continue with `/speckit.clarify` → `/speckit.plan` → `/speckit.tasks`
 → `/speckit.analyze` → `/speckit.implement` exactly as in Path B.
+
+---
+
+## Path D — A/B test an accessibility ruleset
+
+Measure how much an accessibility ruleset improves generated code by
+building the **same** feature twice, changing **only** which ruleset is
+active. Full protocol, measurement harness, and results template live in
+[`experiments/accessibility-ab/`](./experiments/accessibility-ab/).
+
+### D.1. Pick the feature
+
+A small, interaction-dense feature — `003-recently-viewed` is the
+recommended candidate (dialogs, undo, focus, keyboard, reduced-motion).
+
+### D.2. Two branches, one variable
+
+Branch both arms from a base that already has the DDS tokens and the
+expanded dataset:
+
+```bash
+git checkout -b exp/a11y-ab--armA-baseline
+git checkout -b exp/a11y-ab--armB-alternate
+```
+
+- **Arm A** keeps `.windsurf/rules/accessibility.md` exactly as shipped.
+- **Arm B** uses *your* alternate ruleset **instead** (replace the file's
+  contents on this branch, or disable it and add yours). The shipped rule
+  is never edited by the experiment scaffold.
+
+Everything else — spec, plan, tasks, dataset, DDS tokens, stack, model —
+stays identical. See the "Held constant" list in the experiment README.
+
+### D.3. Implement identically
+
+Run the *same* `/speckit.implement` for the chosen feature in each arm.
+Do not hand-fix accessibility afterward — you're measuring what the agent
+produced.
+
+### D.4. Measure in report mode
+
+Run the harness in
+[`experiments/accessibility-ab/metrics.md`](./experiments/accessibility-ab/metrics.md)
+against both builds. **Disable the axe/Lighthouse merge gates for the
+run** — otherwise Arm B can't land its failures and you'll never see the
+difference. Record raw numbers in a copy of `results-template.md`.
+
+> Heads-up on what you're measuring: shadcn/Radix and `jsx-a11y` give
+> both arms a baseline of accessibility, so the delta is the *marginal*
+> value of the ruleset on top of the stack — the honest question. Strip
+> Radix/jsx-a11y only if you mean to measure the whole a11y program.
 
 ---
 
